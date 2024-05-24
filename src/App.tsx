@@ -1,99 +1,144 @@
-import "./index.css";
+import React, { useRef, useEffect, useState } from "react";
+import Footer from "./components/footer";
+import Contact from "./components/Contact";
+import Tools from "./components/Tools";
+import Home from "./components/Home";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import React, { Suspense, lazy, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-const HomePage = lazy(() => import("./pages/HomePage"));
-const Profile = lazy(() => import("./pages/Profile"));
-const Error = lazy(() => import("./pages/Error"));
-const QuizPage = lazy(() => import("./pages/QuizPage"));
-const Finished = lazy(() => import("./pages/Finished"));
-
-import Toggle from "./components/Toggle";
-
-import { useAppDispatch, useAppSelector } from "./store";
-
-import darkImageDesktop from "./assets/images/pattern-background-desktop-dark.svg";
-import lightImageDesktop from "./assets/images/pattern-background-desktop-light.svg";
-import darkImageTablet from "./assets/images/pattern-background-tablet-dark.svg";
-import lightImageTablet from "./assets/images/pattern-background-tablet-light.svg";
-
-import { addScore } from "./store/QuizSlice";
-
-const App = () => {
-  const { darkMode } = useAppSelector((state) => state.home);
-  //const { addScore } = useAppDispatch((state ) => state.quiz)
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    // Load scores from local storage on component mount (if any)
-    const storedScores = localStorage.getItem("UserScores");
-    if (storedScores) {
-      const parsedScores = JSON.parse(storedScores);
-      dispatch(addScore(parsedScores));
+const App: React.FC = () => {
+  const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [dispatch]);
+  };
+
+  const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const toolsRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (
+        contactRef.current?.offsetTop !== undefined &&
+        contactRef.current?.offsetHeight !== undefined &&
+        scrollPosition >= contactRef.current?.offsetTop &&
+        scrollPosition <
+          contactRef.current?.offsetTop + contactRef.current?.offsetHeight
+      ) {
+        setActiveSection("contact");
+      } else if (
+        projectsRef.current?.offsetTop !== undefined &&
+        projectsRef.current?.offsetHeight !== undefined &&
+        scrollPosition >= projectsRef.current?.offsetTop &&
+        scrollPosition <
+          projectsRef.current?.offsetTop + projectsRef.current?.offsetHeight
+      ) {
+        setActiveSection("projects");
+      } else if (
+        toolsRef.current?.offsetTop !== undefined &&
+        toolsRef.current?.offsetHeight !== undefined &&
+        scrollPosition >= toolsRef.current?.offsetTop &&
+        scrollPosition <
+          toolsRef.current?.offsetTop + toolsRef.current?.offsetHeight
+      ) {
+        setActiveSection("tools");
+      } else if (
+        aboutRef.current?.offsetTop !== undefined &&
+        aboutRef.current?.offsetHeight !== undefined &&
+        scrollPosition >= aboutRef.current?.offsetTop &&
+        scrollPosition <
+          aboutRef.current?.offsetTop + aboutRef.current?.offsetHeight
+      ) {
+        setActiveSection("about");
+      } else {
+        setActiveSection("home");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <>
-      <div className="w-full absolute inset-0">
-        {!darkMode && (
-          <>
-            <img
-              src={lightImageDesktop}
-              alt="Light Mode Desktop Background"
-              className="hidden lg:block w-full h-full object-cover transition-opacity duration-300 bg-black bg-opacity-20"
-            />
-            <img
-              src={lightImageTablet}
-              alt="Light Mode small Background"
-              className="block lg:hidden w-full h-full object-cover transition-opacity duration-300 bg-black bg-opacity-20"
-            />
-          </>
-        )}
-
-        {/* Dark mode images */}
-        {darkMode && (
-          <>
-            <img
-              src={darkImageDesktop}
-              alt="Dark Mode Desktop Background"
-              className="hidden lg:block w-full h-full object-cover transition-opacity duration-300 bg-black bg-opacity-90"
-            />
-            <img
-              src={darkImageTablet}
-              alt="Dark Mode Tablet Background"
-              className="block lg:hidden w-full h-full object-cover transition-opacity duration-300 bg-black bg-opacity-90"
-            />
-          </>
-        )}
-        <div className="absolute inset-0 ">
-          <Router>
-            <Suspense
-              fallback={<div className="text-center text-black">Loading</div>}
+    <div>
+      
+        <div
+          className="flex flex-row gap-x-4 fixed w-full items-center justify-center px-2"
+          style={{ backdropFilter: "blur(10px)" }}
+        >
+          <div className="bg-white gap-x-4 bg-opacity-40 rounded-lg lg:w-full py-4 flex flex-row items-center justify-center font-semibold font-serif">
+            <p
+              onClick={() => scrollToRef(homeRef)}
+              className={`${
+                activeSection === "home"
+                  ? "text-green-700 underline"
+                  : "hover:text-green-700"
+              } cursor-pointer`}
             >
-              <Routes>
-                <Route
-                  path="/*"
-                  element={
-                    <div>
-                      <Toggle />
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/quiz" element={<QuizPage />} />
-
-                        <Route path="/profile" element={<Profile />} />
-                        <Route path="/finished" element={<Finished />} />
-                        <Route path="/*" element={<Error />} />
-                      </Routes>
-                    </div>
-                  }
-                />
-              </Routes>
-            </Suspense>
-          </Router>
+              Home
+            </p>
+            <p
+              onClick={() => scrollToRef(aboutRef)}
+              className={`${
+                activeSection === "about"
+                  ? "text-green-700 underline"
+                  : "hover:text-green-700"
+              } cursor-pointer`}
+            >
+              About
+            </p>
+            <p
+              onClick={() => scrollToRef(toolsRef)}
+              className={`${
+                activeSection === "tools"
+                  ? "text-green-700 underline"
+                  : "hover:text-green-700"
+              } cursor-pointer`}
+            >
+              Tools
+            </p>
+            <p
+              onClick={() => scrollToRef(projectsRef)}
+              className={`${
+                activeSection === "projects"
+                  ? "text-green-700 underline"
+                  : "hover:text-green-700"
+              } cursor-pointer`}
+            >
+              Portfolio
+            </p>
+            <p
+              onClick={() => scrollToRef(contactRef)}
+              className={`${
+                activeSection === "contact"
+                  ? "text-green-700 underline"
+                  : "hover:text-green-700"
+              } cursor-pointer`}
+            >
+              Contact
+            </p>
+          
         </div>
       </div>
-    </>
+      <Home ref={homeRef} />
+      <About ref={aboutRef} />
+      <Tools ref={toolsRef} />
+      <Projects ref={projectsRef} />
+      <Contact ref={contactRef} />
+      <Footer />
+      <ToastContainer />
+    </div>
   );
 };
 
