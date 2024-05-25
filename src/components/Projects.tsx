@@ -12,7 +12,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
     <div ref={ref}>
       <div className="flex flex-col items-center justify-center gap-y-8 mt-8">
         <h2 className="text-4xl text-black font-bold uppercase">Projects</h2>
-        <div className="flex lg:flex-row sm:flex-col gap-x-6 sm:gap-y-2">
+        <div className="flex lg:flex-row sm:flex-col gap-x-6 sm:gap-y-2 sm:px-4">
           <div className="h-[31rem] rounded-md border border-black w-96 flex flex-col">
             <img src={img4} className="w-96 h-40" />
             <div className="flex flex-col gap-y-4 ml-2">

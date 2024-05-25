@@ -12,8 +12,8 @@ const Articles = () => {
           {" "}
           Articles
         </h2>
-        <div className="lg:w-[60rem] sm:w-[20rem] lg:h-40 rounded-md border border-black flex sm:flex-col lg:flex-row gap-x-2">
-          <img src={img1} className="w-80 border border-black" />
+        <div className="lg:w-[60rem] sm:w-[20rem] lg:h-40 rounded-md border border-gray-400 flex sm:flex-col lg:flex-row gap-x-2 shadow-xl">
+          <img src={img1} className="w-80 border border-gray-500" />
           <div className="flex flex-col gap-y-2 sm:ml-2">
             <h2 className="text-green-700 font-bold text-2xl">
               How to consume RESTful APi using Fetch API and axios into React
@@ -33,8 +33,8 @@ const Articles = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-[60rem] sm:w-[20rem] lg:h-40 rounded-md border border-black flex sm:flex-col lg:flex-row gap-x-2">
-          <img src={img2} className="w-80 border border-black" />
+        <div className="lg:w-[60rem] sm:w-[20rem] lg:h-40 rounded-md border border-gray-400 flex sm:flex-col lg:flex-row gap-x-2 shadow-xl">
+          <img src={img2} className="w-80 border border-gray-500" />
           <div className="flex flex-col gap-y-2 sm:ml-2">
             <h2 className="text-green-700 font-bold text-2xl">
               Mastering React's Context API
@@ -56,8 +56,8 @@ const Articles = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-[60rem] lg:h-40 sm:w-[20rem] rounded-md border border-black flex sm:flex-col lg:flex-row gap-x-2">
-          <img src={img3} className="w-80 border border-black" />
+        <div className="lg:w-[60rem] lg:h-40 sm:w-[20rem] rounded-md border border-gray-400 flex sm:flex-col lg:flex-row gap-x-2 shadow-lg">
+          <img src={img3} className="w-80 border border-gray-500" />
           <div className="flex flex-col gap-y-2 sm:ml-2">
             <h2 className="text-green-700 font-bold text-2xl">
               JSX VS TSX : The battle for React supremacy
@@ -81,8 +81,8 @@ const Articles = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-[60rem] lg:h-40 sm:w-[20rem] rounded-md border border-black flex sm:flex-col lg:flex-row gap-x-2">
-          <img src={img4} className="w-80 border border-black" />
+        <div className="lg:w-[60rem] lg:h-40 sm:w-[20rem] rounded-md border border-gray-400 flex sm:flex-col lg:flex-row gap-x-2 shadow-lg">
+          <img src={img4} className="w-80 border border-gray-500" />
           <div className="flex flex-col gap-y-2 sm:ml-2">
             <h2 className="text-green-700 font-bold text-2xl ">
               Next.js : Level up your React skills with Nextjs

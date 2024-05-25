@@ -29,7 +29,7 @@ const About = forwardRef<HTMLDivElement> ((props, ref) => {
         hidden: { opacity: 0, y: 50 },
       }}
       transition={{ duration: 0.3 }}
-      className="lg:px-36 lg:text-lg"
+      className="lg:px-36 sm:px-8 lg:text-lg"
     >
       
       I'm a frontend web developer with over 2 years of experience with a strong
