@@ -75,7 +75,7 @@ const Contact = forwardRef<HTMLDivElement> (( props, ref) => {
         transition={{ duration: 0.5 }}
         className="lg:w-full bg-green-700 py-4 "
       >
-        <div className="flex lg:flex-row lg:ml-36 sm:ml-2 sm:flex-col  gap-x-40">
+        <div className="flex lg:flex-row lg:ml-36 sm:ml-2 sm:mr-2 sm:flex-col  gap-x-40">
           <form
             ref={formRef}
             onSubmit={sendEmail}
