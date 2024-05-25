@@ -1,22 +1,24 @@
-# Quiz App
+# My Porfolio website
 
-This is a Quiz app built with React, Typescript, Tailwind CSS and Redux, . 
+This is a protfilio site was built with React, Typescript, Tailwind CSS and Framer-motion. 
 
 ## Features
 
-- **Quiz:**
-  - Users have 10 questons in each topic, and 5 minutes to answer each one.
-  - Users can view their scores in the leaderboard located in the profile page.
+- **Sections:**
+  -You can view my projects, articles plus my tech stack in all different sections.
+   - You can access all my social media account pages by clicking on each social media icon
+  - **Mail:**
+  -You can aend  mail to reach out to me.
 
 - **User Interface:**
   - Responsive design using Tailwind CSS.
-  - Notifications using react-toastify.
+  - Beautiful animationss with framer-motion.
 
 ## Technologies Used
 
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Redux](https://redux.js.org/)
+
 
 
 
@@ -25,7 +27,7 @@ This is a Quiz app built with React, Typescript, Tailwind CSS and Redux, .
 1. **Clone the Repository:**
    ```bash
 
-   git clone https://github.com/your-username/E-commerce-app.git
+   git clone https://github.com/your-username/Portfolio.git
    cd E-commerce-app
       ```
 2. **Install Dependencies:**
@@ -35,12 +37,8 @@ This is a Quiz app built with React, Typescript, Tailwind CSS and Redux, .
   npm install
 ```
 
-3. **Set Up Firebase:**
-
-   Create a Firebase project and set up authentication and a real-time database.
-   Update Firebase configuration in your app. 
    
-4. **Run the App:**
+3. **Run the App:**
 
   ```bash
 
@@ -56,7 +54,7 @@ src/: Source code of the application.
 components/: Reusable React components.
 
 pages/: Top-level components representing pages.
-store/: Redux store setup.
+
 
 ## Contributing
 Contributions are welcome! If you find a bug or have a feature request, please open an issue. If you want to contribute, please fork the repository and create a pull request.
