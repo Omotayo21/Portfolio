@@ -5,13 +5,13 @@ import img7 from "../../public/background.jpg";
 
 const Home = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div ref={ref} className="relative w-full h-[35rem]">
+    <div ref={ref} className="relative w-full h-[45rem]">
       <img
         src={img7}
         alt="Light Mode Desktop Background"
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-black opacity-60"></div>{" "}
+      <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
       {/* Dark overlay */}
       <div className="flex flex-col items-center justify-center text-white absolute inset-0 z-10">
         <div className="flex flex-col gap-y-2 md:mb-[40rem] lg:mb-0 sm:mb-16">
