@@ -28,7 +28,7 @@ This is a protfilio site was built with React, Typescript, Tailwind CSS and Fram
    ```bash
 
    git clone https://github.com/your-username/Portfolio.git
-   cd E-commerce-app
+   cd Portfolio
       ```
 2. **Install Dependencies:**
 
