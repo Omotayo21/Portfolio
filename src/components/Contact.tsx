@@ -69,10 +69,7 @@ const Contact = forwardRef<HTMLDivElement> (( props, ref) => {
   return (
     <div ref={ref}>
       <motion.div
-        ref={formInViewRef}
-        initial={{ opacity: 0, y: 50 }}
-        animate={formInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5 }}
+       
         className="lg:w-full bg-green-700 py-4 "
       >
         <div className="flex lg:flex-row lg:ml-36 sm:ml-2 sm:mr-2 sm:flex-col  gap-x-40">

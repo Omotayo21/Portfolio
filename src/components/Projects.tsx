@@ -13,7 +13,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
       <div className="flex flex-col items-center justify-center gap-y-8 mt-8">
         <h2 className="text-4xl text-black font-bold uppercase">Projects</h2>
         <div className="flex lg:flex-row sm:flex-col gap-x-6 sm:gap-y-2 sm:px-4">
-          <div className="h-[31rem] rounded-md border border-black w-[23rem] flex flex-col">
+          <div className="h-[31rem] rounded-md border border-black w-[22rem] flex flex-col">
             <img src={img4} className="w-96 h-40" />
             <div className="flex flex-col gap-y-4 ml-2">
               {" "}
@@ -54,7 +54,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
               </p>
             </div>
           </div>
-          <div className="h-[31rem] rounded-md border border-black w-[23rem] flex flex-col">
+          <div className="h-[31rem] rounded-md border border-black w-[22rem] flex flex-col">
             <img src={img7} className="w-96 h-40" />
             <div className="flex flex-col gap-y-4 ml-2">
               {" "}
@@ -94,7 +94,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
           </div>
         </div>
         <div className="flex lg:flex-row sm:flex-col gap-x-6 sm:gap-y-2">
-          <div className="h-[26rem] rounded-md border border-black w-[23rem]">
+          <div className="h-[26rem] rounded-md border border-black w-[22rem]">
             <img src={img5} className="w-96 h-40" />
             <div className="flex flex-col gap-y-4 ml-2">
               {" "}
@@ -129,7 +129,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
               </div>
             </div>
           </div>
-          <div className="h-[26em] rounded-md border border-black w-[23rem]">
+          <div className="h-[26em] rounded-md border border-black w-[22rem]">
             <img src={img6} className="w-96 h-40" />
             <div className="ml-2 gap-y-3 flex flex-col">
               {" "}

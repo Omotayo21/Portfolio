@@ -26,9 +26,9 @@ const About = forwardRef<HTMLDivElement> ((props, ref) => {
       animate={controls}
       variants={{
         visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 20 },
       }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.1 }}
       className="lg:px-36 sm:px-8 lg:text-lg"
     >
       
