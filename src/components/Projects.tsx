@@ -73,23 +73,21 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
               </p>
               <div className="flex flex-row justify-between">
                 <a
-                  href=""
-                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer text-red-600 line-through"
+                  href="https://product-feedback-app-ap8f-j61bn8v45-omotayo21s-projects.vercel.app/home"
+                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer "
                 >
                   <BiGlobe size={20} />
                   View Live
                 </a>
                 <a
-                  href=""
-                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer text-red-600 line-through"
+                  href="https://github.com/Omotayo21/Product-feedback-app/tree/main"
+                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer "
                 >
                   <FaGithub size={20} />
                   View Code
                 </a>
               </div>
-              <p className="text-[0.8rem]">
-                *Project still in progress, will be deployed soon
-              </p>
+              
             </div>
           </div>
         </div>
