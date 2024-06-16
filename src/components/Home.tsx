@@ -6,7 +6,7 @@ import img9 from '../../public/icon.svg'
 
 const Home = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div ref={ref} className="relative w-full h-[45rem]">
+    <div ref={ref} className="relative w-full h-[48rem]">
       <img
         src={img7}
         alt="Light Mode Desktop Background"
