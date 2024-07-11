@@ -97,7 +97,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
             <div className="flex flex-col gap-y-4 ml-2">
               {" "}
               <h2 className="font-bold text-black text-xl uppercase">
-                E-commerce App
+              Vue E-commerce App
               </h2>
               <p>
                 {" "}
@@ -107,18 +107,18 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
               </p>
               <p>
                 <span className="text-black font-semibold">Tech stack:</span>
-                React, Redux, Framer-motion, tailwind css, Firebase
+                Vue, Pinia, tailwind css, Firebase
               </p>
               <div className="flex flex-row justify-between">
                 <a
-                  href="https://e-commerce-app-omotayo21.vercel.app"
+                  href= "https://vue-shopping-qpuw32o2p-omotayo21s-projects.vercel.app/"
                   className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
                 >
                   <BiGlobe size={20} />
                   View Live
                 </a>
                 <a
-                  href="https://github.com/Omotayo21/E-commerce-app/tree/main"
+                  href= "https://github.com/Omotayo21/Vue-shopping-app/tree/main"
                   className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
                 >
                   <FaGithub size={20} />
