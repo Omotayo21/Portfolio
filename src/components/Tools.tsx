@@ -102,6 +102,17 @@ const Tools = forwardRef<HTMLDivElement> ((props, ref) => {
           <SiReactquery color="#EF7834" size={64} className="mx-auto mb-2" />
           <p>React Query</p>
         </motion.div>
+         <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
+         <SiExpress
+            color="#333"
+           size={64}
+            className="mx-auto mb-2" />
+          <p>ExpressJs</p>
+        </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
