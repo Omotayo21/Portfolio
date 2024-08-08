@@ -4,6 +4,7 @@ import img4 from '../../public/expensehub-bg.png'
 import img5 from '../../public/shopping.png'
 import img6 from '../../public/quiz.png';
 import img7 from '../../public/feedback.png'
+import img11 from '../../public/hangman.png'
 import { BiGlobe } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa6';
 
@@ -119,6 +120,40 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
                 </a>
                 <a
                   href= "https://github.com/Omotayo21/Vue-shopping-app/tree/main"
+                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
+                >
+                  <FaGithub size={20} />
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+           <div className="h-[26rem] rounded-md border border-black w-[22rem]">
+            <img src={img11} className="w-96 h-40" />
+            <div className="flex flex-col gap-y-4 ml-2">
+              {" "}
+              <h2 className="font-bold text-black text-xl uppercase">
+              Hangman Game
+              </h2>
+              <p>
+                {" "}
+                The hangman game is an entertaining game to test your knowledge across various categories.
+                Challenge yourself with word-guessing fun as you uncover hidden phrases. With a total of 8 guesses, test your skills and see if you can guess a phrase before the hangman is complete.
+              </p>
+              <p>
+                <span className="text-black font-semibold">Tech stack:</span>
+                Vue, Pinia, tailwind css.
+              </p>
+              <div className="flex flex-row justify-between">
+                <a
+                  href= "https://rahman-hangman.vercel.app/"
+                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
+                >
+                  <BiGlobe size={20} />
+                  View Live
+                </a>
+                <a
+                  href= "https://github.com/Omotayo21/rahman-hangman-vue"
                   className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
                 >
                   <FaGithub size={20} />
