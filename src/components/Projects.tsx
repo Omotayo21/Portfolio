@@ -69,7 +69,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
               </p>
               <p>
                 <span className="text-black font-semibold">Tech stack:</span>
-                Next.js, Tailwind, Mongoose, MongoDb, Jwttoken,
+                Next.js, Tailwind, Mongoose, MongoDb.
                
               </p>
               <div className="flex flex-row justify-between">
@@ -128,7 +128,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
               </div>
             </div>
           </div>
-           <div className="h-[31rem] rounded-md border border-black w-[22rem]">
+           <div className="h-[28.5rem] rounded-md border border-black w-[22rem]">
             <img src={img11} className="w-96 h-40" />
             <div className="flex flex-col gap-y-4 ml-2">
               {" "}
