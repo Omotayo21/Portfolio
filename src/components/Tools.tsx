@@ -21,6 +21,7 @@ import {
   SiTypescript,
   SiMongoose,
   SiVuedotjs,
+ 
 } from "react-icons/si";
 
 const Tools = forwardRef<HTMLDivElement> ((props, ref) => {
@@ -177,6 +178,19 @@ const Tools = forwardRef<HTMLDivElement> ((props, ref) => {
           <SiVuedotjs color="42b883" size={64} className="mx-auto mb-2" />
           <p>Vue.js</p>
         </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
+          <FaReact color="#00D8FF" size={64} className="mx-auto mb-2" />
+          <p>React-native</p>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
       </div>
     </div>
   );
