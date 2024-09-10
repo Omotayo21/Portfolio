@@ -186,11 +186,7 @@ const Tools = forwardRef<HTMLDivElement> ((props, ref) => {
           <FaReact color="#00D8FF" size={64} className="mx-auto mb-2" />
           <p>React-native</p>
         </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="text-center"
-        >
+       
       </div>
     </div>
   );
