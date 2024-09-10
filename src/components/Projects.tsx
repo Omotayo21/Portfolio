@@ -7,6 +7,7 @@ import img7 from '../../public/feedback.png'
 import img11 from '../../public/hangman.png'
 import { BiGlobe } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa6';
+import MobileApp from './MobileApp'
 
 const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
   return (
@@ -198,7 +199,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
             </div>
           </div>
         </div>
-
+<MobileApp />
         <Articles />
       </div>
     </div>
