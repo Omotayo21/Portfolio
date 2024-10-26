@@ -5,7 +5,7 @@ import img5 from '../../public/shopping.png'
 import img6 from '../../public/quiz.png';
 import img7 from '../../public/feedback.png'
 import img11 from '../../public/hangman.png'
-import img12 from '../../punlic/kanban.png'
+import img12 from '../../public/kanban.png'
 import { BiGlobe } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa6';
 import MobileApp from './MobileApp'
