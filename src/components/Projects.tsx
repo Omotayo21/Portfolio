@@ -49,8 +49,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
                 </a>
               </div>
               <p className="text-[0.65rem]">
-                *Site may load slowly at first due to Render's deployment
-                policy, but just relax
+             
               </p>
             </div>
           </div>
