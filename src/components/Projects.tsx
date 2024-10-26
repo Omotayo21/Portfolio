@@ -1,10 +1,11 @@
 import React, {forwardRef} from 'react'
 import Articles from './Articles'
-import img4 from '../../public/expensehub-bg.png'
+
 import img5 from '../../public/shopping.png'
 import img6 from '../../public/quiz.png';
 import img7 from '../../public/feedback.png'
 import img11 from '../../public/hangman.png'
+import img12 from '../../punlic/kanban.png'
 import { BiGlobe } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa6';
 import MobileApp from './MobileApp'
@@ -16,34 +17,31 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
         <h2 className="text-4xl text-black font-bold uppercase">Projects</h2>
         <div className="flex lg:flex-row sm:flex-col gap-x-6 sm:gap-y-2 sm:px-4">
           <div className="h-[31rem] rounded-md border border-black w-[22rem] flex flex-col">
-            <img src={img4} className="w-96 h-40" />
+            <img src={img12} className="w-96 h-40" />
             <div className="flex flex-col gap-y-4 ml-2">
               {" "}
               <h2 className="font-bold text-black text-xl uppercase">
-                expense hub
+                Kanban board
               </h2>
               <p>
                 A full stack web application built with Next.js, where users can
-                sign up, verify their email, change password if forgotten,
-                create expenses and revenues, view their expenses on bar charts
-                and piecharts and always retrieve their records from the
-                database{" "}
+                sign up, verify their email, change password if forgotten.
+               It allows users to create, update, and manage boards and tasks. It features task completion tracking, column movements and theme switching, providing an interactive user experience
               </p>
               <p>
                 <span className="text-black font-semibold">Tech stack:</span>
-                Next.js, Redux, Tailwind, Mongoose, MongoDb, Jwttoken,
-                react-chart-js, nodemailer
+                Next.js, Redux, Tailwind, Mongoose, MongoDb, Jwttoken, nodemailer
               </p>
               <div className="flex flex-row justify-between">
                 <a
-                  href="https://expense-hub-2.onrender.com"
+                  href="https://kanban-board-vert-seven.vercel.app/"
                   className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
                 >
                   <BiGlobe size={20} />
                   View Live
                 </a>
                 <a
-                  href="https://github.com/Omotayo21/expense-hub"
+                  href="https://github.com/Omotayo21/kanban-board/"
                   className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
                 >
                   <FaGithub size={20} />
