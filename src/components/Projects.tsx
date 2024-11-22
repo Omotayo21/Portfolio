@@ -32,19 +32,19 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
                 <span className="text-black font-semibold">Tech stack:</span>
                 Next.js, Redux, Tailwind, Mongoose, MongoDb, Jwttoken, nodemailer
               </p>
-              <div className="flex flex-row gap-1 justify-between">
+              <div className="flex flex-row justify-between">
                 <a
                   href="https://kanban-board-vert-seven.vercel.app/"
-                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
+                  className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer"
                 >
-                  <BiGlobe size={18} className="mt-1" />
+                  <BiGlobe size={18} className="mt-[0.15rem]" />
                   View Live
                 </a>
                 <a
                   href="https://github.com/Omotayo21/kanban-board/"
                   className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer"
                 >
-                  <FaGithub size={18} className="mt-1" />
+                  <FaGithub size={18} className="mt-[0.15rem]" />
                   View Code
                 </a>
               </div>
@@ -70,19 +70,19 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
                 Next.js, Tailwind, Mongoose, MongoDb.
                
               </p>
-              <div className="flex flex-row gap-1 justify-between">
+              <div className="flex flex-row  justify-between">
                 <a
                   href="https://product-feedback-app-ap8f-j61bn8v45-omotayo21s-projects.vercel.app/home"
-                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer "
+                  className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer "
                 >
-                  <BiGlobe size={18} className="mt-1" />
+                  <BiGlobe size={18} className="mt-[0.15rem]" />
                   View Live
                 </a>
                 <a
                   href="https://github.com/Omotayo21/Product-feedback-app/tree/main"
                   className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer "
                 >
-                  <FaGithub size={18} className="mt-1" />
+                  <FaGithub size={18} className="mt-[0.15rem]" />
                   View Code
                 </a>
               </div>
@@ -111,16 +111,16 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
               <div className="flex flex-row gap-1 justify-between">
                 <a
                   href= "https://vue-shopping-qpuw32o2p-omotayo21s-projects.vercel.app/"
-                  className="flex flex-row hover:underline hover:text-blue-900 cursor-pointer"
+                  className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer"
                 >
-                  <BiGlobe size={18} className="mt-1" />
+                  <BiGlobe size={18} className="mt-[0.15rem]" />
                   View Live
                 </a>
                 <a
                   href= "https://github.com/Omotayo21/Vue-shopping-app/tree/main"
                   className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer"
                 >
-                  <FaGithub size={18} className="mt-1" />
+                  <FaGithub size={18} className="mt-[0.15rem]" />
                   View Code
                 </a>
               </div>
@@ -147,20 +147,20 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
                   href= "https://rahman-hangman.vercel.app/"
                   className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer"
                 >
-                  <BiGlobe size={18} className="mt-1" />
+                  <BiGlobe size={18} className="mt-[0.15rem]" />
                   View Live
                 </a>
                 <a
                   href= "https://github.com/Omotayo21/rahman-hangman-vue"
                   className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer"
                 >
-                  <FaGithub size={18} className="mt-1" />
+                  <FaGithub size={18} className="mt-[0.15rem]" />
                   View Code
                 </a>
               </div>
             </div>
           </div>
-          <div className="h-[26em] rounded-md border border-black w-[22rem]">
+          <div className="h-[26rem] rounded-md border border-black w-[22rem]">
             <img src={img6} className="w-96 h-40" />
             <div className="ml-2 gap-y-3 flex flex-col">
               {" "}
@@ -182,14 +182,14 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
                   href="https://quiz-app-fc4v.vercel.app/"
                   className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer"
                 >
-                  <BiGlobe size={18} className="mt-1" />
+                  <BiGlobe size={18} className="mt-[0.15rem]" />
                   View Live
                 </a>
                 <a
                   href="https://github.com/Omotayo21/Quiz-app"
                   className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer"
                 >
-                  <FaGithub size={18} className="mt-1" />
+                  <FaGithub size={18} className="mt-[0.15rem]" />
                   View Code
                 </a>
               </div>
