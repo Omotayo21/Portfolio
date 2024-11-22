@@ -32,7 +32,7 @@ const MobileApp = () => {
                   href="https://github.com/Omotayo21/News-Mobile-App"
                   className="flex flex-row gap-1 hover:underline hover:text-blue-900 cursor-pointer "
                 >
-                  <FaGithub size={18} />
+                  <FaGithub size={18} className="mt-[0.15rem]" />
                   View Code
                 </a>
               </div>
