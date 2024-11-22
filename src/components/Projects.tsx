@@ -160,7 +160,7 @@ const Projects = forwardRef<HTMLDivElement> ((props, ref) => {
               </div>
             </div>
           </div>
-          <div className="h-[26rem] rounded-md border border-black w-[22rem]">
+          <div className="h-[28rem] rounded-md border border-black w-[22rem]">
             <img src={img6} className="w-96 h-40" />
             <div className="ml-2 gap-y-3 flex flex-col">
               {" "}
