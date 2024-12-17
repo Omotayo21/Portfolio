@@ -32,9 +32,9 @@ const About = forwardRef<HTMLDivElement> ((props, ref) => {
       className="lg:px-36 sm:px-8 lg:text-lg"
     >
       
-      I'm a frontend web developer with over 2 years of experience with a strong
+      I'm a fullstack web developer with over 2 years of experience with a strong
       focus on creating visually appealing, responsive and scalable websites and
-      web applications. Feel free to connect and share your project ideas and I
+      web applications. I have worked on both frontend and backend projects and satisfied all my clients. Feel free to connect and share your project ideas and I
       would be delighted to collaborate with you and help bring your ideas into
       reality. I look forward to hearing from you
     </motion.p>
