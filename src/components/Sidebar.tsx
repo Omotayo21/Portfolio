@@ -5,7 +5,7 @@ interface SidebarProps {
   closeSidebar: () => void;
   scrollToRef: (ref: React.RefObject<HTMLDivElement>) => void;
   activeSection: string | null;
-  homeRef: React.RefObject<HTMLDivElement>;
+ // homeRef: React.RefObject<HTMLDivElement>;
   aboutRef: React.RefObject<HTMLDivElement>;
   toolsRef: React.RefObject<HTMLDivElement>;
   projectsRef: React.RefObject<HTMLDivElement>;
@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   closeSidebar,
   scrollToRef,
   activeSection,
-  homeRef,
+ // homeRef,
   aboutRef,
   toolsRef,
   projectsRef,
@@ -24,7 +24,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   return (
     <div
-      className="flex flex-col fixed top-0 left-0 w-screen h-screen bg-white bg-opacity-80 z-30 items-center justify-center"
+      className="flex flex-col fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-80 z-30 items-center justify-center"
       style={{ backdropFilter: "blur(10px)" }}
     >
       <button onClick={closeSidebar} className="absolute top-4 right-4">
@@ -33,26 +33,13 @@ const Sidebar: React.FC<SidebarProps> = ({
       <div className="flex flex-col items-center gap-y-4 font-semibold font-serif">
         <p
           onClick={() => {
-            scrollToRef(homeRef);
-            closeSidebar();
-          }}
-          className={`${
-            activeSection === "home"
-              ? "text-green-700 underline"
-              : "hover:text-green-700"
-          } cursor-pointer`}
-        >
-          Home
-        </p>
-        <p
-          onClick={() => {
             scrollToRef(aboutRef);
             closeSidebar();
           }}
           className={`${
             activeSection === "about"
-              ? "text-green-700 underline"
-              : "hover:text-green-700"
+              ? "text-blue-500 underline"
+              : "hover:text-blue-500"
           } cursor-pointer`}
         >
           About
@@ -64,8 +51,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           }}
           className={`${
             activeSection === "tools"
-              ? "text-green-700 underline"
-              : "hover:text-green-700"
+              ? "text-blue-500 underline"
+              : "hover:text-blue-500"
           } cursor-pointer`}
         >
           Tools
@@ -77,8 +64,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           }}
           className={`${
             activeSection === "projects"
-              ? "text-green-700 underline"
-              : "hover:text-green-700"
+              ? "text-blue-500 underline"
+              : "hover:text-blue-500"
           } cursor-pointer`}
         >
           Portfolio
@@ -90,12 +77,18 @@ const Sidebar: React.FC<SidebarProps> = ({
           }}
           className={`${
             activeSection === "contact"
-              ? "text-green-700 underline"
-              : "hover:text-green-700"
+              ? "text-blue-500 underline"
+              : "hover:text-blue-500"
           } cursor-pointer`}
         >
           Contact
         </p>
+        <a
+          href="https://docs.google.com/document/d/1Ji-ThC3yNJJCoug1P3qI2fkCSD6nzy2v/edit?usp=drive_link&ouid=113009511116235450897&rtpof=true&sd=true"
+          className={`cursor-pointer bg-blue-700 p-2 border border-transparent rounded-md`}
+        >
+          Resume
+        </a>
       </div>
     </div>
   );

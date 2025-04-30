@@ -1,70 +1,54 @@
-# My Porfolio website
+# React + TypeScript + Vite
 
-This is a protfilio site was built with React, Typescript, Tailwind CSS and Framer-motion. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **Sections:**
-  -You can view my projects, articles plus my tech stack in all different sections.
-   - You can access all my social media account pages by clicking on each social media icon
-  - **Mail:**
-  -You can aend  mail to reach out to me.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- **User Interface:**
-  - Responsive design using Tailwind CSS.
-  - Beautiful animationss with framer-motion.
+## Expanding the ESLint configuration
 
-## Technologies Used
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-
-
-
-
-## Getting Started
-
-1. **Clone the Repository:**
-   ```bash
-
-   git clone https://github.com/your-username/Portfolio.git
-   cd Portfolio
-      ```
-2. **Install Dependencies:**
-
-  ```bash
-
-  npm install
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-   
-3. **Run the App:**
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-  ```bash
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-   npm run dev
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
 ```
-
-5. **Open in Browser:**
-
-Open http://localhost:3000 in your browser.
-
-## Folder Structure
-src/: Source code of the application.
-components/: Reusable React components.
-
-pages/: Top-level components representing pages.
-
-
-## Contributing
-Contributions are welcome! If you find a bug or have a feature request, please open an issue. If you want to contribute, please fork the repository and create a pull request.
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
-
-
-
-

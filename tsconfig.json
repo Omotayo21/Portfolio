@@ -1,27 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "ESNext" /* Specify ECMAScript target version */,
-    "useDefineForClassFields": true /* Enable proper handling of class fields */,
-    "module": "ESNext" /* Set module system for code generation */,
-    "moduleResolution": "Node" /* Resolve modules using Node.js style */,
-    "strict": true /* Enable all strict type-checking options */,
-    "jsx": "preserve" /* Preserve JSX syntax in output files */,
-    "resolveJsonModule": true /* Allow importing JSON files as modules */,
-    "isolatedModules": true /* Treat each file as a separate module */,
-    "esModuleInterop": true /* Enable compatibility with CommonJS modules */,
-    "lib": [
-      "ESNext",
-      "DOM"
-    ] /* Include standard libraries for target and DOM */,
-    "skipLibCheck": true /* Skip type checking of built-in libraries */,
-    "noEmit": true /* Don't emit output files (Vite handles this) */,
-    "types": ["vite/client"] /* Include Vite-specific type definitions */
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*/jsx",
-    "src/**/*.vue"
-  ], /* Include files for compilation */
-  "exclude" : ["node_modules"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }

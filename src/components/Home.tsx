@@ -1,8 +1,8 @@
 import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
 import Links from "./Links";
-import img7 from "../../public/background.jpg";
-import img9 from '../../public/icon.svg'
+import img7 from "/background.jpg";
+//import img9 from '../../public/icon.svg'
 
 const Home = forwardRef<HTMLDivElement>((props, ref) => {
   return (
@@ -41,11 +41,11 @@ const Home = forwardRef<HTMLDivElement>((props, ref) => {
           >
             <p className="flex flex-row gap-x-1 lg:text-lg">
               <div className="rounded-full h-2 w-2 bg-white lg:mt-3 sm:mt-2 font-semibold"></div>
-              Front-end web developer
+              Full-stack web developer
             </p>
             <p className="flex flex-row gap-x-1 lg:text-lg">
               <div className="rounded-full h-2 w-2 bg-white lg:mt-3 sm:mt-2 font-semibold"></div>
-              Technical Writer
+              Mobile-app developer
             </p>
           </motion.div>
           <motion.div

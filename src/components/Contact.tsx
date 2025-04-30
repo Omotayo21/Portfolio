@@ -70,7 +70,7 @@ const Contact = forwardRef<HTMLDivElement> (( props, ref) => {
     <div ref={ref}>
       <motion.div
        
-        className="lg:w-full bg-green-700 py-4 "
+        className="lg:w-full bg-gray-800 py-4 "
       >
         <div className="flex lg:flex-row lg:ml-36 sm:ml-2 sm:mr-2 sm:flex-col  gap-x-40">
           <form
@@ -101,7 +101,7 @@ const Contact = forwardRef<HTMLDivElement> (( props, ref) => {
             {messageError && (
               <p className="text-red-500 text-sm">{messageError}</p>
             )}
-            <button className="bg-white lg:w-96 sm:w-80 sm:ml-6 text-green-700 font-semibold p-2 text-sm h-10">
+            <button className="bg-white lg:w-96 sm:w-80 lg:ml-0 sm:ml-6 text-gray-700 font-semibold p-2 text-sm h-10">
               {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
@@ -109,12 +109,10 @@ const Contact = forwardRef<HTMLDivElement> (( props, ref) => {
           <div className="flex flex-col p-4 ">
             <h1 className="text-white font-bold ">Get In Touch</h1>
             <p className=" text-white mb-4">
-              I am a web developer who is dedicated to providing high-quality,
-              user-friendly websites and web applications. I am committed to
-              ensuring that you are completely satisfied with your project.
+              If you have any questions or inquiries, please don't hesitate to reach out
               <br /> I will personally review your message within 24 hours and
-              provide you with a tailored solution that meets your specific
-              requirements. Thank you for your trust!
+              provide you with an efficient solution that meets your specific
+              requirements.
             </p>
             <p className="text-white flex flex-row gap-x-2">
               <MapPin size={20} className="mt-1" /> Lagos, Nigeria

@@ -24,15 +24,15 @@ const App: React.FC = () => {
   const contactRef = useRef<HTMLDivElement>(null);
 
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  const [dropdown, setDropdown] = useState<boolean>(false)
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
-const openSideBar = () => {
-  setDropdown(true)
-}
+  const openSideBar = () => {
+    setDropdown(true);
+  };
 
-const closeSidebar = () => {
-  setDropdown(false)
-}
+  const closeSidebar = () => {
+    setDropdown(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,35 +82,37 @@ const closeSidebar = () => {
   }, []);
 
   return (
-    <div >
-      
-        <div className="sm:w-screen h-12 bg-gray-200 fixed z-20 lg:hidden "><List
+    <div className="bg-black font-sans text-white opacity-80">
+      <div className="sm:w-screen h-12 bg-gray-200 fixed z-20 lg:hidden ">
+        <List
           onClick={openSideBar}
           size={24}
           className="fixed right-4 z-20 text-black top-2"
-        /></div>
-     
+        />
+      </div>
+
       <div
-        className="lg:flex flex-row sm:hidden gap-x-4 fixed w-full items-center justify-center  z-20"
+        className="lg:flex flex-row bg-gray-200 sm:hidden gap-x-4 fixed w-full items-center justify-center  z-20"
         style={{ backdropFilter: "blur(10px)" }}
       >
-        <div className="bg-white gap-x-4 bg-opacity-40 lg:w-full py-4 flex flex-row items-center justify-center font-semibold font-serif">
+        <div className="bg-gray-500 text-white gap-x-4 bg-opacity-40 lg:w-full py-4 flex flex-row items-center justify-center font-semibold font-serif">
           <p
-            onClick={() => scrollToRef(homeRef)}
+            onClick={() => scrollToRef(projectsRef)}
             className={`${
-              activeSection === "home"
-                ? "text-green-700 underline"
-                : "hover:text-green-700"
+              activeSection === "projects"
+                ? "text-blue-500 underline"
+                : "hover:text-blue-500"
             } cursor-pointer`}
           >
-            Home
+            Projects
           </p>
+
           <p
             onClick={() => scrollToRef(aboutRef)}
             className={`${
               activeSection === "about"
-                ? "text-green-700 underline"
-                : "hover:text-green-700"
+                ? "text-blue-500 underline"
+                : "hover:text-blue-500"
             } cursor-pointer`}
           >
             About
@@ -119,32 +121,29 @@ const closeSidebar = () => {
             onClick={() => scrollToRef(toolsRef)}
             className={`${
               activeSection === "tools"
-                ? "text-green-700 underline"
-                : "hover:text-green-700"
+                ? "text-blue-500 underline"
+                : "hover:text-blue-500"
             } cursor-pointer`}
           >
             Tools
           </p>
           <p
-            onClick={() => scrollToRef(projectsRef)}
-            className={`${
-              activeSection === "projects"
-                ? "text-green-700 underline"
-                : "hover:text-green-700"
-            } cursor-pointer`}
-          >
-            Portfolio
-          </p>
-          <p
             onClick={() => scrollToRef(contactRef)}
             className={`${
               activeSection === "contact"
-                ? "text-green-700 underline"
-                : "hover:text-green-700"
+                ? "text-blue-500 underline"
+                : "hover:text-blue-500"
             } cursor-pointer`}
           >
             Contact
           </p>
+          <a
+         href="https://docs.google.com/document/d/1Ji-ThC3yNJJCoug1P3qI2fkCSD6nzy2v/edit?usp=drive_link&ouid=113009511116235450897&rtpof=true&sd=true"
+         
+            className={`cursor-pointer bg-blue-700 p-2 border border-transparent rounded-md`}
+          >
+            Resume
+          </a>
         </div>
       </div>
       {dropdown && (
@@ -152,7 +151,7 @@ const closeSidebar = () => {
           closeSidebar={closeSidebar}
           scrollToRef={scrollToRef}
           activeSection={activeSection}
-          homeRef={homeRef}
+          // homeRef={homeRef}
           aboutRef={aboutRef}
           toolsRef={toolsRef}
           projectsRef={projectsRef}
