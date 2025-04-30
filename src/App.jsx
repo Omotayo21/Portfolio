@@ -10,21 +10,21 @@ import "react-toastify/dist/ReactToastify.css";
 import { List } from "phosphor-react";
 import Sidebar from "./components/Sidebar";
 
-const App: React.FC = () => {
-  const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+const App = () => {
+  const scrollToRef = (ref) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const homeRef = useRef<HTMLDivElement>(null);
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const toolsRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const toolsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const [activeSection, setActiveSection] = useState<string | null>(null);
-  const [dropdown, setDropdown] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState(null);
+  const [dropdown, setDropdown] = useState(false);
 
   const openSideBar = () => {
     setDropdown(true);

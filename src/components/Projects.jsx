@@ -36,7 +36,7 @@ const fadeInVariants = {
   },
 };
 
-const Projects = forwardRef<HTMLDivElement>((props, ref) => {
+const Projects = forwardRef((props, ref) => {
   const projects = [
    
     {

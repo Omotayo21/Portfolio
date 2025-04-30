@@ -4,7 +4,7 @@ import Links from "./Links";
 import img7 from "/background.jpg";
 //import img9 from '../../public/icon.svg'
 
-const Home = forwardRef<HTMLDivElement>((props, ref) => {
+const Home = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="relative w-full h-[48rem]">
       <img
@@ -39,14 +39,14 @@ const Home = forwardRef<HTMLDivElement>((props, ref) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 1, ease: "easeOut" }}
           >
-            <p className="flex flex-row gap-x-1 lg:text-lg">
+            <div className="flex flex-row gap-x-1 lg:text-lg">
               <div className="rounded-full h-2 w-2 bg-white lg:mt-3 sm:mt-2 font-semibold"></div>
               Full-stack web developer
-            </p>
-            <p className="flex flex-row gap-x-1 lg:text-lg">
+            </div>
+            <div className="flex flex-row gap-x-1 lg:text-lg">
               <div className="rounded-full h-2 w-2 bg-white lg:mt-3 sm:mt-2 font-semibold"></div>
               Mobile-app developer
-            </p>
+            </div>
           </motion.div>
           <motion.div
             className=""

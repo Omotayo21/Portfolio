@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
 
-const About = forwardRef<HTMLDivElement>((props, ref) => {
+const About = forwardRef((props, ref) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

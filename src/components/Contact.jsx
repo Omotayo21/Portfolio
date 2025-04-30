@@ -6,16 +6,16 @@ import emailjs from "@emailjs/browser";
 import {toast} from "react-toastify";
 import Links from "./Links";
 
-const Contact = forwardRef<HTMLDivElement> (( props, ref) => {
+const Contact = forwardRef (( props, ref) => {
   const [ formInViewRef, formInView ] = useInView({ threshold: 0.5 });
-  const formRef = useRef<HTMLFormElement>(null);
-  const [nameError, setNameError] = useState<string | null>(null);
-  const [emailError, setEmailError] = useState<string | null>(null);
-  const [messageError, setMessageError] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
+  const formRef = useRef(null);
+  const [nameError, setNameError] = useState(null);
+  const [emailError, setEmailError] = useState(null);
+  const [messageError, setMessageError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
  
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     const form = formRef.current;
     setLoading(true)

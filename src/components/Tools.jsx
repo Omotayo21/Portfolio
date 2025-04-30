@@ -24,7 +24,7 @@ import {
  
 } from "react-icons/si";
 
-const Tools = forwardRef<HTMLDivElement> ((props, ref) => {
+const Tools = forwardRef ((props, ref) => {
   return (
     <div ref={ref} className="border rounded-2xl bg-[#0c0c0c] pb-12 border-transparent">
       <h1 className="flex flex-row items-center justify-center font-bold text-3xl text-white mb-8 mt-8 uppercase ">
