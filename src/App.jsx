@@ -83,7 +83,7 @@ const App = () => {
 
   return (
     <div className="bg-black font-sans text-white opacity-80">
-      <div className="sm:w-screen h-12 bg-gray-200 fixed z-20 lg:hidden ">
+      <div className="sm:w-full h-12 bg-gray-200 fixed z-20 lg:hidden ">
         <List
           onClick={openSideBar}
           size={24}
