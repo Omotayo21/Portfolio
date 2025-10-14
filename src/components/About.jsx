@@ -35,7 +35,7 @@ const About = forwardRef((props, ref) => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="max-w-4xl mx-auto text-center"
+        className="max-w-4xl mx-auto text-center overflow-x-hidden"
       >
         <motion.h2
           variants={itemVariants}
@@ -75,15 +75,7 @@ const About = forwardRef((props, ref) => {
               maintainable and practical solutions.
             </motion.p>
 
-            {/*<motion.p
-              variants={itemVariants}
-              className="text-lg text-gray-200 leading-relaxed"
-            >
-              What sets me apart is my problem-solving mindset and ability to
-              translate complex requirements into elegant technical solutions. I
-              thrive in collaborative environments and take pride in delivering
-              projects that exceed expectations.
-            </motion.p> */}
+          
           </div>
 
           <motion.div

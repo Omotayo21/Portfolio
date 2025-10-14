@@ -82,8 +82,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-black font-sans text-white opacity-80 min-w-full">
-      <div className="sm:w-full h-12 bg-gray-200 fixed z-20 lg:hidden ">
+    <div className="w-screen overflow-x-hidden bg-black font-sans text-white opacity-80">
+      <div className="fixed top-0 left-0 right-0 h-12 bg-gray-200 z-20 lg:hidden">
         <List
           onClick={openSideBar}
           size={24}
@@ -92,7 +92,7 @@ const App = () => {
       </div>
 
       <div
-        className="lg:flex flex-row bg-gray-200 sm:hidden gap-x-4 fixed w-full items-center justify-center  z-20"
+        className="lg:flex flex-row bg-gray-200 sm:hidden gap-x-4 fixed left-0 right-0 items-center justify-center z-20"
         style={{ backdropFilter: "blur(10px)" }}
       >
         <div className="bg-gray-500 text-white gap-x-4 bg-opacity-40 lg:w-full py-4 flex flex-row items-center justify-center font-semibold font-serif">

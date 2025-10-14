@@ -6,7 +6,7 @@ import img7 from "/background.jpg";
 
 const Home = forwardRef((props, ref) => {
   return (
-    <div ref={ref} className="relative w-full h-[48rem]">
+    <div ref={ref} className="relative w-screen h-screen">
       <img
         src={img7}
         alt="Light Mode Desktop Background"
