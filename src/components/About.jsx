@@ -28,7 +28,7 @@ const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-black text-white"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-black text-white w-full"
     >
       <motion.div
         initial="hidden"
