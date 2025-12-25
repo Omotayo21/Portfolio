@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, } from "react-icons/fa6";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 
 const MobileApp = () => {
@@ -25,6 +26,30 @@ const MobileApp = () => {
       image: "/shopping mobile.jpg", // Replace with your actual image path
       githubLink: "https://github.com/Omotayo21/react-native-shopping-app",
       demoLink: "#",
+      tag: "React Native",
+    },
+    {
+      id: 3,
+      title: "Pomodoro Timer Mobile App",
+      description:
+        "A pomodoro timer mobile app built with React Native that helps users track their time and productivity with push notifications and sound effects.",
+      techStack: "React Native,Expo CLI, Haptics, typescript, expo-audio",
+      image: "/pomodoro-timer.jpg", // Replace with your actual image path
+      githubLink: "https://github.com/Omotayo21/pomodoro-mobile-App",
+      demoLink:
+        "https://expo.dev/accounts/omotayo21/projects/pomodoro-timer/builds/ead29a8a-b193-408d-a31b-380bf66cd93d",
+      tag: "React Native",
+    },
+    {
+      id: 4,
+      title: "Notes Mobile App",
+      description:
+        "A notes mobile app built with React Native that allows users to create, edit, archive delete and search for notes. Users can also change font and color of the notes.",
+      techStack: "React Native,Expo CLI, AsyncStorage",
+      image: "/notes-mobile.jpg", // Replace with your actual image path
+      githubLink: "https://github.com/Omotayo21/Notes-app",
+      demoLink:
+        "https://expo.dev/accounts/omotayo21/projects/notes/builds/1c37a82d-75a8-4186-aab9-e8465e35db99",
       tag: "React Native",
     },
   ];
@@ -125,15 +150,19 @@ const MobileApp = () => {
                     <span>View Code</span>
                   </a>
 
-                 {/* <a
+                 {app.demoLink && <a
                     href={app.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
                   >
-                    <FiExternalLink size={18} />
-                    <span>View Demo</span>
-                  </a>*/}
+                    {/* Use a link icon from react-icons or one representing Expo */}
+                    {/* Option 1: Using FaExternalLinkAlt from react-icons/fa */}
+                    {/* import { FaExternalLinkAlt } from "react-icons/fa"; (put this at the top of the file) */}
+                    <FaExternalLinkAlt size={18} />
+                    <span>View Demo on Expo</span>
+                  </a>
+                }
                 </motion.div>
               </div>
             </motion.div>

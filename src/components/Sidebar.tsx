@@ -84,7 +84,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           Contact
         </p>
         <a
-          href="https://drive.google.com/file/d/1wl669RWpmaX6JgZKTE1nutRiKq5_pCRc/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1MbWdNVh3PfQ0LwfP4twctNug1k1QXqo7/view?usp=drive_link"
           className={`cursor-pointer bg-blue-700 p-2 border border-transparent rounded-md`}
         >
           Resume
