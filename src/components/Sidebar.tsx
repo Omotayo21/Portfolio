@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { X } from "phosphor-react";
 
 interface SidebarProps {
@@ -83,6 +84,13 @@ const Sidebar: React.FC<SidebarProps> = ({
         >
           Contact
         </p>
+        <Link
+          to="/web3"
+          onClick={closeSidebar}
+          className="hover:text-blue-500 cursor-pointer text-white"
+        >
+          Web3
+        </Link>
         <a
           href="https://drive.google.com/file/d/1MbWdNVh3PfQ0LwfP4twctNug1k1QXqo7/view?usp=drive_link"
           className={`cursor-pointer bg-blue-700 p-2 border border-transparent rounded-md`}
