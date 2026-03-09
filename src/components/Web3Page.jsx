@@ -20,8 +20,8 @@ const Web3Page = () => {
       description:
         "A comprehensive dashboard for indexing and visualizing ERC20 tokens and NFTs. Features real-time data fetching, efficient parsing, and a user-friendly interface for tracking assets across the blockchain.",
       tech: ["React", "Alchemy SDK", "Ethers.js", "Tailwind CSS"],
-      liveLink: "https://example.com/project1",
-      codeLink: "https://github.com/example/project1",
+      liveLink: "https://aether-indexer.vercel.app/",
+      codeLink: "https://github.com/Omotayo21/nft-indexer",
       image: aether,
       color: "from-cyan-500 to-blue-600",
       icon: <BiLayer className="text-cyan-400" />
@@ -32,8 +32,8 @@ const Web3Page = () => {
       description:
         "A decentralized marketplace for trading Non-Fungible Tokens. Includes features for listing, buying, and auctioning NFTs, with a focus on security and seamless wallet integration.",
       tech: ["Next.js", "Solidity", "Hardhat", "IPFS"],
-      liveLink: "https://example.com/project2",
-      codeLink: "https://github.com/example/project2",
+      liveLink: "https://rahman-nft-marketplace.vercel.app/",
+      codeLink: "https://github.com/Omotayo21/NFT-Marketplace",
       image: marketplace,
       color: "from-purple-500 to-pink-600",
       icon: <FaCube className="text-purple-400" />
@@ -44,8 +44,8 @@ const Web3Page = () => {
       description:
         "A decentralized application allowing users to stake their tokens and earn rewards. Implements secure smart contracts for staking pools and reward distribution mechanisms.",
       tech: ["Vue.js", "web3.js", "Solidity", "Truffle"],
-      liveLink: "https://example.com/project3",
-      codeLink: "https://github.com/example/project3",
+      liveLink: "https://rahman-staking-dapp.vercel.app/",
+      codeLink: "https://github.com/Omotayo21/Staking-Dapp",
       image: staking,
       color: "from-green-500 to-emerald-600",
       icon: <FaEthereum className="text-green-400" />
@@ -63,12 +63,7 @@ const Web3Page = () => {
     { name: 'Viem', icon: <BiStats /> },
   ];
 
-  const stats = [
-    { label: 'Contracts Deployed', value: '15+', icon: <FaRocket /> },
-    { label: 'Testnet Txns', value: '500+', icon: <BiTransfer /> },
-    { label: 'Audits Passed', value: '3',  },
-    { label: 'Hackathons', value: '2', icon: <BiStats /> },
-  ];
+
 
   return (
     <div className="w-screen min-h-screen bg-black font-sans text-white overflow-x-hidden relative">
@@ -232,28 +227,7 @@ const Web3Page = () => {
                 </div>
             </motion.div>
 
-            <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="space-y-10 p-8 rounded-3xl border border-white/5 bg-white/5 backdrop-blur-sm relative overflow-hidden"
-            >
-                <div className="absolute top-0 right-0 p-12 bg-purple-500/10 blur-[50px]" />
-                <h3 className="text-2xl font-bold uppercase tracking-wider text-purple-400">On-Chain Impact</h3>
-                 <div className="grid grid-cols-2 gap-6 text-left">
-                    {stats.map((stat) => (
-                        <div key={stat.label} className="p-6 bg-black/40 border border-white/5 rounded-2xl group hover:border-purple-500/50 hover:bg-purple-500/5 transition-all">
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="text-2xl text-gray-500 group-hover:text-purple-400 transition-colors">
-                                    {stat.icon}
-                                </span>
-                                <div className="text-4xl font-black text-white group-hover:scale-110 transition-transform">{stat.value}</div>
-                            </div>
-                            <div className="text-gray-500 text-xs font-mono uppercase tracking-widest">{stat.label}</div>
-                        </div>
-                    ))}
-                </div>
-            </motion.div>
+           
         </section>
 
         {/* Profile / Footer Section */}
