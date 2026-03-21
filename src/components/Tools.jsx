@@ -21,6 +21,13 @@ import {
   SiTypescript,
   SiMongoose,
   SiVuedotjs,
+  SiDocker,
+  SiRedis,
+  SiPostgresql,
+ SiZustand,
+  SiGithubactions,
+  SiSocketdotio,
+ 
  
 } from "react-icons/si";
 
@@ -185,6 +192,54 @@ const Tools = forwardRef ((props, ref) => {
         >
           <FaReact color="#00D8FF" size={64} className="mx-auto mb-2" />
           <p>React-native</p>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
+          <SiDocker color="#00D8FF" size={64} className="mx-auto mb-2" />
+          <p>Docker</p>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
+          <SiRedis color="#00D8FF" size={64} className="mx-auto mb-2" />
+          <p>Redis</p>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
+          <SiPostgresql color="#00D8FF" size={64} className="mx-auto mb-2" />
+          <p>Postgresql</p>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
+          <SiGithubactions color="#00D8FF" size={64} className="mx-auto mb-2" />
+          <p>Githubactions</p>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
+          <SiSocketdotio color="#00D8FF" size={64} className="mx-auto mb-2" />
+          <p>Socket.io</p>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="text-center"
+        >
+          <SiZustand color="#00D8FF" size={64} className="mx-auto mb-2" />
+          <p>Zustand</p>
         </motion.div>
        
       </div>
