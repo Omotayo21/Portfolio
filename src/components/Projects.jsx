@@ -5,9 +5,9 @@ import { FaGithub } from "react-icons/fa6";
 import MobileApp from "./MobileApp";
 
 // Import your images
-const img13 = "/shopping.png";
+const img13 = "/xando.png";
 const img12 = "/quiz.png";
-const img7 = "/feedback.png";
+const img7 = "/devflow.png";
 const img5 = "/hangman.png";
 const img11 = "/kanban.png";
 const img6 = "/devlinks.png";
@@ -52,8 +52,21 @@ const Projects = forwardRef((props, ref) => {
       animation:
         animationTypes[Math.floor(Math.random() * animationTypes.length)],
     },
-    {
+      {
       id: 2,
+      title: "Devflow",
+      description:"Devflow is a full-stack engineering collaboration platform built for engineering teams. Create workspaces, manage projects on a kanban board, assign tasks and get email notifications all in one place",
+      tech: "React.js, Tailwind, express.js, Node.js, Redis, Postgresql, docker,CI/CD actions",
+      liveLink:
+        "https://rahman-devflow.vercel.app/login",
+      codeLink: "https://github.com/Omotayo21/devflow",
+      image: img7,
+      borderColor: "border-purple-500",
+      animation:
+        animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    },
+    {
+      id: 3,
       title: "Kanban board",
       description:
         "A full stack web application built with Next.js, where users can sign up, verify their email, change password if forgotten. It allows users to create, update, and manage boards and tasks.",
@@ -65,29 +78,16 @@ const Projects = forwardRef((props, ref) => {
       animation:
         animationTypes[Math.floor(Math.random() * animationTypes.length)],
     },
-    {
-      id: 3,
-      title: "Product feedback app",
-      description:
-        "Full stack web application that allows users to create, edit, delete and engage with the community by commenting on feedback entries and responding to existing comments.",
-      tech: "Next.js, Tailwind, Mongoose, MongoDb.",
-      liveLink:
-        "https://product-feedback-app-ap8f-j61bn8v45-omotayo21s-projects.vercel.app/home",
-      codeLink: "https://github.com/Omotayo21/Product-feedback-app/tree/main",
-      image: img7,
-      borderColor: "border-purple-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
+  
     {
       id: 4,
-      title: "Vue E-commerce App",
+      title: "X and O",
       description:
-        "An E-commerce app where users can sign up and be authenticated with firebase, select products, remove or add products, see total and checkout.",
-      tech: "Vue, Pinia, tailwind css, Firebase",
+        "A multiplayer tic tac toe game that allows users to play with each other in real-time and communicate.",
+      tech: "React.js, socket.io, express.js, node.js",
       liveLink:
-        "https://vue-shopping-qpuw32o2p-omotayo21s-projects.vercel.app/",
-      codeLink: "https://github.com/Omotayo21/Vue-shopping-app/tree/main",
+        "https://rahman-xando.vercel.app/",
+      codeLink: "https://github.com/Omotayo21/tic-tac-toe",
       image: img13,
       borderColor: "border-green-500",
       animation:
