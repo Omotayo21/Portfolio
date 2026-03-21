@@ -7,6 +7,7 @@ import {
   FaNode,
   FaReact,
   FaSass,
+  
 } from "react-icons/fa6";
 import {
   SiExpress,
@@ -24,7 +25,7 @@ import {
   SiDocker,
   SiRedis,
   SiPostgresql,
- SiZustand,
+
   SiGithubactions,
   SiSocketdotio,
  
@@ -233,14 +234,7 @@ const Tools = forwardRef ((props, ref) => {
           <SiSocketdotio color="#00D8FF" size={64} className="mx-auto mb-2" />
           <p>Socket.io</p>
         </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="text-center"
-        >
-          <SiZustand color="#00D8FF" size={64} className="mx-auto mb-2" />
-          <p>Zustand</p>
-        </motion.div>
+        
        
       </div>
     </div>
