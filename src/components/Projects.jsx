@@ -11,6 +11,7 @@ const img7 = "/devflow.png";
 const img5 = "/hangman.png";
 const img11 = "/kanban.png";
 const img6 = "/devlinks.png";
+const img14 ="/jto.png"
 
 // All possible animation types
 const animationTypes = ["left", "right", "top", "bottom", "scale", "rotate"];
@@ -41,14 +42,14 @@ const Projects = forwardRef((props, ref) => {
    
     {
       id: 1,
-      title: "Devlinks",
-      description:
-        "A developer link management platform which is a web app for managing and sharing links easily. It offers link CRUD, real-time previews, and profile setup with pictures",
-      tech: "React.js, Tailwind, express.js, Node.js, Mongoose, MongoDb, Jwttoken, nodemailer",
-      liveLink: "https://rahman-devlinks.vercel.app/",
-      codeLink: "https://github.com/Omotayo21/devlinks",
-      image: img6,
-      borderColor: "border-red-500",
+      title: "JTOtheLabel",
+      description:"JTOtheLabel website is a fashion e-commerce platform built for ease of shopping for customers, secure payment, and efficient order management for the brand.",
+      tech: "Next.js, Tailwind, Zustand, Brevo, JWT, Mongoose, MongoDB, Paystack",
+      liveLink:
+        "https://www.jto-website.vercel.app/",
+    
+      image: img14,
+      borderColor: "border-yellow-500",
       animation:
         animationTypes[Math.floor(Math.random() * animationTypes.length)],
     },
@@ -116,6 +117,19 @@ const Projects = forwardRef((props, ref) => {
       codeLink: "https://github.com/Omotayo21/Quiz-app",
       image: img12,
       borderColor: "border-indigo-500",
+      animation:
+        animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    },
+     {
+      id: 7,
+      title: "Devlinks",
+      description:
+        "A developer link management platform which is a web app for managing and sharing links easily. It offers link CRUD, real-time previews, and profile setup with pictures",
+      tech: "React.js, Tailwind, express.js, Node.js, Mongoose, MongoDb, Jwttoken, nodemailer",
+      liveLink: "https://rahman-devlinks.vercel.app/",
+      codeLink: "https://github.com/Omotayo21/devlinks",
+      image: img6,
+      borderColor: "border-red-500",
       animation:
         animationTypes[Math.floor(Math.random() * animationTypes.length)],
     },
