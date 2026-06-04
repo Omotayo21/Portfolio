@@ -55,6 +55,19 @@ const Projects = forwardRef((props, ref) => {
     },
       {
       id: 2,
+      title: "Devlinks",
+      description:
+        "A developer link management platform which is a web app for managing and sharing links easily. It offers link CRUD, real-time previews, and profile setup with pictures",
+      tech: "React.js, Tailwind, express.js, Node.js, Mongoose, MongoDb, Jwttoken, nodemailer",
+      liveLink: "https://rahman-devlinks.vercel.app/",
+      codeLink: "https://github.com/Omotayo21/devlinks",
+      image: img6,
+      borderColor: "border-red-500",
+      animation:
+        animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    },
+      {
+      id: 3,
       title: "Devflow",
       description:"Devflow is a full-stack engineering collaboration platform built for engineering teams. Create workspaces, manage projects on a kanban board, assign tasks and get email notifications all in one place",
       tech: "React.js, Tailwind, express.js, Node.js, Redis, Postgresql, docker,CI/CD actions",
@@ -67,7 +80,7 @@ const Projects = forwardRef((props, ref) => {
         animationTypes[Math.floor(Math.random() * animationTypes.length)],
     },
     {
-      id: 3,
+      id: 4,
       title: "Kanban board",
       description:
         "A full stack web application built with Next.js, where users can sign up, verify their email, change password if forgotten. It allows users to create, update, and manage boards and tasks.",
@@ -81,7 +94,7 @@ const Projects = forwardRef((props, ref) => {
     },
   
     {
-      id: 4,
+      id: 5,
       title: "X and O",
       description:
         "A multiplayer tic tac toe game that allows users to play with each other in real-time and communicate.",
@@ -95,7 +108,7 @@ const Projects = forwardRef((props, ref) => {
         animationTypes[Math.floor(Math.random() * animationTypes.length)],
     },
     {
-      id: 5,
+      id: 6,
       title: "Hangman Game",
       description:
         "The hangman game is an entertaining game to test your knowledge across various categories. Challenge yourself with word-guessing fun as you uncover hidden phrases.",
@@ -108,7 +121,7 @@ const Projects = forwardRef((props, ref) => {
         animationTypes[Math.floor(Math.random() * animationTypes.length)],
     },
     {
-      id: 6,
+      id: 7,
       title: "Quiz app",
       description:
         "The quiz application is a web appplication for selecting and taking various frontend related quizzes. It contains multiple choice questions and can let you track your scores.",
@@ -120,19 +133,7 @@ const Projects = forwardRef((props, ref) => {
       animation:
         animationTypes[Math.floor(Math.random() * animationTypes.length)],
     },
-     {
-      id: 7,
-      title: "Devlinks",
-      description:
-        "A developer link management platform which is a web app for managing and sharing links easily. It offers link CRUD, real-time previews, and profile setup with pictures",
-      tech: "React.js, Tailwind, express.js, Node.js, Mongoose, MongoDb, Jwttoken, nodemailer",
-      liveLink: "https://rahman-devlinks.vercel.app/",
-      codeLink: "https://github.com/Omotayo21/devlinks",
-      image: img6,
-      borderColor: "border-red-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
+   
     // ... rest of your projects with random animations
   ];
 
