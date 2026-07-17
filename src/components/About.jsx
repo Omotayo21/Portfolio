@@ -28,22 +28,54 @@ const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-black text-white w-full"
+      style={{
+        backgroundColor: "#05070A",
+        width: "100%",
+        padding: "2rem 2rem",
+      }}
     >
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="max-w-4xl mx-auto text-center overflow-x-hidden"
+        style={{
+          maxWidth: "680px",
+          margin: "0 auto",
+          fontFamily: "'Manrope', sans-serif",
+        }}
       >
+        {/* Section label */}
+        <motion.p variants={itemVariants} className="section-label" style={{ marginBottom: "0.75rem" }}>
+          About
+        </motion.p>
+
+        {/* Section heading with animated underline */}
         <motion.h2
           variants={itemVariants}
-          className="text-4xl md:text-5xl font-bold text-gray-200 mb-12 relative inline-block"
+          style={{
+            fontFamily: "'Manrope', sans-serif",
+            fontWeight: 700,
+            fontSize: "2rem",
+            color: "#f9fafb",
+            letterSpacing: "-0.03em",
+            marginBottom: "2.5rem",
+            position: "relative",
+            display: "inline-block",
+          }}
         >
           About Me
           <motion.span
-            className="absolute bottom-0 left-0 w-full h-1 bg-blue-500"
+            style={{
+              position: "absolute",
+              bottom: "-4px",
+              left: 0,
+              height: "2px",
+              background: "#2563EB",
+              width: "100%",
+              display: "block",
+              transformOrigin: "left",
+            }}
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
@@ -51,47 +83,25 @@ const About = forwardRef((props, ref) => {
           />
         </motion.h2>
 
-        <motion.div
+        {/* Content */}
+        <motion.p
           variants={itemVariants}
-          className="grid gap-8 md:grid-cols-2 items-center"
+          style={{
+            fontFamily: "'Manrope', sans-serif",
+            fontWeight: 400,
+            fontSize: "1.15rem",
+            color: "#D1D5DB",
+            lineHeight: 1.85,
+            margin: 0,
+          }}
         >
-          <div className="text-left space-y-6">
-            <motion.p
-              variants={itemVariants}
-              className="text-lg text-gray-200 leading-relaxed"
-            >
-              I'm a passionate full-stack developer with expertise in modern web
-              technologies. With over 3 years of professional experience, I
-              specialize in building functional, efficeint, and responsive web and mobile
-              applications that deliver exceptional user experiences.
-            </motion.p>
-
-            <motion.p
-              variants={itemVariants}
-              className="text-lg text-gray-200 leading-relaxed"
-            >
-              My technical toolkit includes React, Next.js, TypeScript, Node.js, React-native and
-              modern CSS frameworks. I'm committed to writing clean,
-              maintainable and practical solutions.
-            </motion.p>
-
-          
-          </div>
-
-          <motion.div
-            variants={itemVariants}
-            className="relative h-64 md:h-80 rounded-xl overflow-hidden shadow-xl"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-20" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-6xl md:text-8xl font-bold text-gray-200 opacity-30">
-                {"</>"}
-              </span>
-            </div>
-          </motion.div>
-        </motion.div>
-
-       
+          I'm a Full-stack Software Developer with commercial experience
+          building web and mobile applications for startups and
+          businesses. I enjoy turning complex business requirements into clean,
+          maintainable software, with experience spanning SaaS products,
+          e-commerce platforms, client solutions, production deployments, and
+          technical problem solving.
+        </motion.p>
       </motion.div>
     </div>
   );

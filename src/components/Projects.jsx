@@ -1,28 +1,42 @@
 import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
-import { BiGlobe } from "react-icons/bi";
+import { BiGlobe, BiVideo } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiMongodb,
+  SiPostgresql,
+  SiRedis,
+  SiDocker,
+  SiExpress,
+  SiVuedotjs,
+  SiGithubactions,
+  SiRedux,
+  SiSocketdotio
+
+} from "react-icons/si";
+import { FaReact, FaNode } from "react-icons/fa6";
 import MobileApp from "./MobileApp";
 
-// Import your images
-const img13 = "/xando.png";
-const img12 = "/quiz.png";
-const img7 = "/devflow.png";
-const img5 = "/hangman.png";
+// ── Image paths ──────────────────────────────────────────────────────────
+const img14 = "/jto.png";
+const img6  = "/devlinks.png";
+const img7  = "/devflow.png";
 const img11 = "/kanban.png";
-const img6 = "/devlinks.png";
-const img14 ="/jto.png"
+const img13 = "/xando.png";
+const img5  = "/hangman.png";
+const img12 = "/quiz.png";
 
-// All possible animation types
+// ── Animation variants (original, preserved exactly) ──────────────────────
 const animationTypes = ["left", "right", "top", "bottom", "scale", "rotate"];
 
-// Animation variants
 const fadeInVariants = {
-  hiddenLeft: { opacity: 0, x: -100 },
-  hiddenRight: { opacity: 0, x: 100 },
+  hiddenLeft:   { opacity: 0, x: -100 },
+  hiddenRight:  { opacity: 0, x: 100 },
   hiddenBottom: { opacity: 0, y: 100 },
-  hiddenTop: { opacity: 0, y: -100 },
-  hiddenScale: { opacity: 0, scale: 0.8 },
+  hiddenTop:    { opacity: 0, y: -100 },
+  hiddenScale:  { opacity: 0, scale: 0.8 },
   hiddenRotate: { opacity: 0, rotate: -15 },
   visible: {
     opacity: 1,
@@ -37,200 +51,302 @@ const fadeInVariants = {
   },
 };
 
-const Projects = forwardRef((props, ref) => {
-  const projects = [
-   
-    {
-      id: 1,
-      title: "JTOtheLabel",
-      description:"JTOtheLabel website is a fashion e-commerce platform built for ease of shopping for customers, secure payment, and efficient order management for the brand.",
-      tech: "Next.js, Tailwind, Zustand, Brevo, JWT, Mongoose, MongoDB, Paystack",
-      liveLink:
-        "https://www.jto-website.vercel.app/",
-    
-      image: img14,
-      borderColor: "border-yellow-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
-      {
-      id: 2,
-      title: "Devlinks",
-      description:
-        "A developer link management platform which is a web app for managing and sharing links easily. It offers link CRUD, real-time previews, and profile setup with pictures",
-      tech: "React.js, Tailwind, express.js, Node.js, Mongoose, MongoDb, Jwttoken, nodemailer",
-      liveLink: "https://rahman-devlinks.vercel.app/",
-      codeLink: "https://github.com/Omotayo21/devlinks",
-      image: img6,
-      borderColor: "border-red-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
-      {
-      id: 3,
-      title: "Devflow",
-      description:"Devflow is a full-stack engineering collaboration platform built for engineering teams. Create workspaces, manage projects on a kanban board, assign tasks and get email notifications all in one place",
-      tech: "React.js, Tailwind, express.js, Node.js, Redis, Postgresql, docker,CI/CD actions",
-      liveLink:
-        "https://rahman-devflow.vercel.app/login",
-      codeLink: "https://github.com/Omotayo21/devflow",
-      image: img7,
-      borderColor: "border-purple-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
-    {
-      id: 4,
-      title: "Kanban board",
-      description:
-        "A full stack web application built with Next.js, where users can sign up, verify their email, change password if forgotten. It allows users to create, update, and manage boards and tasks.",
-      tech: "Next.js, Redux, Tailwind, Mongoose, MongoDb, Jwttoken, nodemailer",
-      liveLink: "https://kanban-board-vert-seven.vercel.app/",
-      codeLink: "https://github.com/Omotayo21/kanban-board/",
-      image: img11,
-      borderColor: "border-blue-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
-  
-    {
-      id: 5,
-      title: "X and O",
-      description:
-        "A multiplayer tic tac toe game that allows users to play with each other in real-time and communicate.",
-      tech: "React.js, socket.io, express.js, node.js",
-      liveLink:
-        "https://rahman-xando.vercel.app/",
-      codeLink: "https://github.com/Omotayo21/tic-tac-toe",
-      image: img13,
-      borderColor: "border-green-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
-    {
-      id: 6,
-      title: "Hangman Game",
-      description:
-        "The hangman game is an entertaining game to test your knowledge across various categories. Challenge yourself with word-guessing fun as you uncover hidden phrases.",
-      tech: "Vue, Pinia, tailwind css.",
-      liveLink: "https://rahman-hangman.vercel.app/",
-      codeLink: "https://github.com/Omotayo21/rahman-hangman-vue",
-      image: img5,
-      borderColor: "border-yellow-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
-    {
-      id: 7,
-      title: "Quiz app",
-      description:
-        "The quiz application is a web appplication for selecting and taking various frontend related quizzes. It contains multiple choice questions and can let you track your scores.",
-      tech: "React, Redux, Typescript, tailwind css",
-      liveLink: "https://quiz-app-fc4v.vercel.app/",
-      codeLink: "https://github.com/Omotayo21/Quiz-app",
-      image: img12,
-      borderColor: "border-indigo-500",
-      animation:
-        animationTypes[Math.floor(Math.random() * animationTypes.length)],
-    },
-   
-    // ... rest of your projects with random animations
-  ];
-
-  const getInitialVariant = (animationType) => {
-    switch (animationType) {
-      case "left":
-        return "hiddenLeft";
-      case "right":
-        return "hiddenRight";
-      case "bottom":
-        return "hiddenBottom";
-      case "top":
-        return "hiddenTop";
-      case "scale":
-        return "hiddenScale";
-      case "rotate":
-        return "hiddenRotate";
-      default:
-        return "hiddenLeft";
-    }
+const getInitialVariant = (type) => {
+  const map = {
+    left:   "hiddenLeft",
+    right:  "hiddenRight",
+    bottom: "hiddenBottom",
+    top:    "hiddenTop",
+    scale:  "hiddenScale",
+    rotate: "hiddenRotate",
   };
+  return map[type] || "hiddenLeft";
+};
 
+// ── Tech icon with tooltip ────────────────────────────────────────────────
+const TechBadge = ({ icon: Icon, color, name }) => (
+  <div className="tech-icon-wrapper" style={{ lineHeight: 0 }}>
+    <Icon color={color} size={18} />
+    <span className="tech-tooltip">{name}</span>
+  </div>
+);
+
+// ── Projects data ─────────────────────────────────────────────────────────
+const projects = [
+  {
+    id: 1,
+    title: "JTOtheLabel",
+    description:
+      "JTOtheLabel website is a fashion e-commerce platform built for ease of shopping for customers, secure payment, and efficient order management for the brand.",
+    tech: [
+      { icon: SiNextdotjs,  color: "#e5e7eb", name: "Next.js" },
+      { icon: SiTailwindcss,color: "#38B2AC", name: "Tailwind" },
+      { icon: SiMongodb,    color: "#4db33d", name: "MongoDB" },
+    
+    ],
+    liveLink: "https://www.jto-website.vercel.app/",
+    borderColor: "border-yellow-500",
+    image: img14,
+    animation: animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    isVideoDemo: false,
+  },
+  {
+    id: 2,
+    title: "Devlinks",
+    description:
+      "Developer link-sharing platform with full CRUD, real-time profile previews and profile setup with pictures.",
+    tech: [
+      { icon: FaReact,   color: "#00D8FF", name: "React" },
+       { icon: SiTailwindcss,color: "#38B2AC", name: "Tailwind" },
+      { icon: SiExpress, color: "#9ca3af", name: "Express" },
+      { icon: SiMongodb, color: "#4db33d", name: "MongoDB" },
+      { icon: FaNode,    color: "#68a063", name: "Node.js" },
+    ],
+    liveLink: "https://rahman-devlinks.vercel.app/",
+    codeLink: "https://github.com/Omotayo21/devlinks",
+    borderColor: "border-red-500",
+    image: img6,
+    animation: animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    isVideoDemo: false,
+  },
+  {
+    id: 3,
+    title: "Devflow",
+    description:
+      "Full-stack engineering collaboration platform featuring workspaces, kanban boards, task assignment and email notifications.",
+    tech: [
+      { icon: FaReact,      color: "#00D8FF", name: "React" },
+       { icon: SiTailwindcss,color: "#38B2AC", name: "Tailwind" },
+      { icon: SiExpress, color: "#9ca3af", name: "Express" },
+            { icon: FaNode,    color: "#68a063", name: "Node.js" },
+      { icon: SiPostgresql, color: "#336791", name: "PostgreSQL" },
+      { icon: SiRedis,      color: "#dc2626", name: "Redis" },
+      { icon: SiDocker,     color: "#2496ed", name: "Docker" },
+            { icon: SiGithubactions, color: "#2496ed", name: "Github Actions" },
+      
+    ],
+    liveLink: "https://rahman-devflow.vercel.app/login",
+    codeLink: "https://github.com/Omotayo21/devflow",
+    borderColor: "border-purple-500",
+    image: img7,
+    animation: animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    isVideoDemo: true,
+  },
+  {
+    id: 4,
+    title: "Kanban Board",
+    description:
+      "Full-stack Task management application with authentication, email verification and full board/task CRUD operations, for creating, updating and managing board and tasks.",
+    tech: [
+      { icon: SiNextdotjs,  color: "#e5e7eb", name: "Next.js" },
+       { icon: SiRedux, color: "#764ABC", name: "Redux" },
+      { icon: SiMongodb,    color: "#4db33d", name: "MongoDB" },
+      { icon: SiTailwindcss,color: "#38B2AC", name: "Tailwind" },
+    ],
+    liveLink: "https://kanban-board-vert-seven.vercel.app/",
+    codeLink: "https://github.com/Omotayo21/kanban-board/",
+    borderColor: "border-blue-500",
+    image: img11,
+    animation: animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    isVideoDemo: false,
+  },
+  {
+    id: 5,
+    title: "X and O",
+    description:
+      "Real-time multiplayer tic-tac-toe game with live call powered by WebSockets.",
+    tech: [
+      { icon: FaReact,   color: "#00D8FF", name: "React" },
+      { icon: SiExpress, color: "#9ca3af", name: "Express" },
+      { icon: FaNode,    color: "#68a063", name: "Node.js" },
+          { icon: SiSocketdotio, color: "#2496ed", name: "Socket.io" },
+    ],
+    liveLink: "https://rahman-xando.vercel.app/",
+    codeLink: "https://github.com/Omotayo21/tic-tac-toe",
+    borderColor: "border-green-500",
+    image: img13,
+    animation: animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    isVideoDemo: false,
+  },
+  {
+    id: 6,
+    title: "Hangman Game",
+    description:
+      "The hangman game is an entertaining game to test your knowledge across various categories. Challenge yourself with word-guessing fun as you uncover hidden phrases",
+    tech: [
+      { icon: SiVuedotjs,   color: "#42b883", name: "Vue.js" },
+      { icon: SiTailwindcss,color: "#38B2AC", name: "Tailwind" },
+    ],
+    liveLink: "https://rahman-hangman.vercel.app/",
+    codeLink: "https://github.com/Omotayo21/rahman-hangman-vue",
+    borderColor: "border-yellow-500",
+    image: img5,
+    animation: animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    isVideoDemo: false,
+  },
+  {
+    id: 7,
+    title: "Quiz App",
+    description:
+      "Frontend quiz application with multiple categories, multiple-choice questions and score tracking.",
+    tech: [
+      { icon: FaReact,      color: "#00D8FF", name: "React" },
+          { icon: SiRedux, color: "#764ABC", name: "Redux" },
+      { icon: SiTailwindcss,color: "#38B2AC", name: "Tailwind" },
+    ],
+    liveLink: "https://quiz-app-fc4v.vercel.app/",
+    codeLink: "https://github.com/Omotayo21/Quiz-app",
+    borderColor: "border-indigo-500",
+    image: img12,
+    animation: animationTypes[Math.floor(Math.random() * animationTypes.length)],
+    isVideoDemo: false,
+  },
+];
+
+// ── Projects Component ────────────────────────────────────────────────────
+const Projects = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="w-full py-12 bg-black text-white"
+      style={{
+        width: "100%",
+        backgroundColor: "#05070A",
+        padding: "2.5rem 0 2rem",
+        borderTop: "1px solid rgba(255,255,255,0.04)",
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section label */}
+        <p className="section-label" style={{ marginBottom: "0.5rem" }}>Work</p>
+
+        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-50px" }}
-          className="text-4xl text-white font-bold uppercase text-center mb-12"
+          style={{
+            fontFamily: "'Manrope', sans-serif",
+            fontWeight: 700,
+            fontSize: "2rem",
+            color: "#FFFFFF",
+            letterSpacing: "-0.03em",
+            marginBottom: "2.0rem",
+          }}
         >
-          Projects
+          Website Projects
         </motion.h2>
 
-        <div className="relative space-y-8 lg:space-y-4">
-          {projects.map((project, index) => {
-            const isEven = index % 2 === 0;
-            const overlapAmount = "25%";
+        {/* ── Original alternating offset layout ── */}
+       <div className="relative space-y-6 lg:space-y-0">
+  {projects.map((project, index) => {
+    const isEven = index % 2 === 0;
 
-            return (
-              <motion.div
-                key={project.id}
-                initial={getInitialVariant(project.animation)}
-                whileInView="visible"
-                viewport={{
-                  once: true,
-                  margin: `-${overlapAmount} 0px -${overlapAmount} 0px`,
-                }}
-                variants={fadeInVariants}
-                className={`relative ${isEven ? "lg:pr-[30%]" : "lg:pl-[30%]"}`}
-              >
-                <motion.div
-                  whileHover={{
-                    scale: 1.03,
-                    boxShadow:
-                      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                  }}
-                  className={`h-full rounded-xl ${
-                    project.borderColor
-                  } border-2 p-6 bg-black text-white shadow-lg transition-all duration-300 ${
-                    isEven ? "lg:mr-auto" : "lg:ml-auto"
-                  }`}
-                  style={{ maxWidth: "800px" }}
-                >
+    return (
+  <motion.div
+  key={project.id}
+  initial={getInitialVariant(project.animation)}
+  whileInView="visible"
+  viewport={{
+    once: true,
+    margin: "0px 0px -10% 0px",
+  }}
+  variants={fadeInVariants}
+  className={`relative ${isEven ? "lg:pr-[40%]" : "lg:pl-[40%]"} ${
+    index === 0 ? "" : "lg:-mt-40"
+  }`}
+  style={{ zIndex: index + 1, pointerEvents: "none" }}
+>
+  <motion.div
+    whileHover={{
+      scale: 1.02,
+      boxShadow:
+        "0 15px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 8px -5px rgba(0, 0, 0, 0.2)",
+    }}
+    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+    className={`h-full rounded-xl ${project.borderColor} border-2 p-4 sm:p-5 shadow-lg transition-all duration-300 ${isEven ? "lg:mr-auto" : "lg:ml-auto"}`}
+    style={{
+      maxWidth: "600px",
+      backgroundColor: "#0A0D12",
+      color: "#D1D5DB",
+      pointerEvents: "auto",
+    }}
+  >
+                  {/* Screenshot */}
                   <img
                     src={project.image}
-                    className="lg:w-full lg:h-80 object-cover rounded-lg mb-6"
+                    className="lg:w-full lg:h-52 object-cover rounded-lg mb-4"
                     alt={project.title}
                   />
-                  <div className="space-y-4">
-                    <h3 className="font-bold text-2xl uppercase text-gray-300">
+
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                    {/* Title */}
+                    <h3
+                      style={{
+                        fontFamily: "'Manrope', sans-serif",
+                        fontWeight: 700,
+                        fontSize: "1.15rem",
+                        color: "#FFFFFF",
+                        letterSpacing: "-0.01em",
+                        textTransform: "uppercase",
+                        margin: 0,
+                      }}
+                    >
                       {project.title}
                     </h3>
-                    <p className="text-gray-300">{project.description}</p>
-                    <div className="text-gray-300 font-medium">
-                      <span className="font-semibold">Tech stack:</span>{" "}
-                      {project.tech}
+
+                    {/* Description */}
+                    <p
+                      style={{
+                        fontFamily: "'Manrope', sans-serif",
+                        fontWeight: 400,
+                        fontSize: "0.9rem",
+                        color: "#D1D5DB",
+                        lineHeight: 1.65,
+                        margin: 0,
+                      }}
+                    >
+                      {project.description}
+                    </p>
+
+                    {/* Tech icons */}
+                    <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap", paddingTop: "0.25rem" }}>
+                      {project.tech.map((t) => (
+                        <TechBadge key={t.name} icon={t.icon} color={t.color} name={t.name} />
+                      ))}
                     </div>
-                    <div className="flex justify-between pt-4">
+
+                    {/* Action buttons */}
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        paddingTop: "0.75rem",
+                      }}
+                    >
                       <a
                         href={project.liveLink}
-                        className="flex items-center gap-2 text-green-500 hover:text-green-800 transition-colors hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link-btn primary"
                       >
-                        <BiGlobe size={20} />
-                        <span>View Live</span>
+                        {project.isVideoDemo ? (
+                          <><BiVideo size={14} /> Video Demo</>
+                        ) : (
+                          <><BiGlobe size={14} /> Live Demo</>
+                        )}
                       </a>
-                      <a
-                        href={project.codeLink}
-                        className="flex items-center gap-2 text-gray-300 hover:text-blue-500 transition-colors"
-                      >
-                        <FaGithub size={20} />
-                        <span>View Code</span>
-                      </a>
+
+                      {project.codeLink && (
+                        <a
+                          href={project.codeLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-link-btn ghost"
+                        >
+                          <FaGithub size={13} /> GitHub
+                        </a>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -239,6 +355,7 @@ const Projects = forwardRef((props, ref) => {
           })}
         </div>
 
+        {/* Mobile Applications */}
         <MobileApp />
       </div>
     </div>

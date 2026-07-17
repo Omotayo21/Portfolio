@@ -1,133 +1,159 @@
-import React, { useRef, useState, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
-import { Envelope, DeviceMobile, MapPin } from "phosphor-react";
-import { useInView } from "react-intersection-observer";
-import emailjs from "@emailjs/browser";
-import {toast} from "react-toastify";
-import Links from "./Links";
+import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
+import { HiDocument } from "react-icons/hi2";
 
-const Contact = forwardRef (( props, ref) => {
-  const [ formInViewRef, formInView ] = useInView({ threshold: 0.5 });
-  const formRef = useRef(null);
-  const [nameError, setNameError] = useState(null);
-  const [emailError, setEmailError] = useState(null);
-  const [messageError, setMessageError] = useState(null);
-  const [loading, setLoading] = useState(false);
-
- 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    const form = formRef.current;
-    setLoading(true)
-
-    // Validate form inputs
-    if (!form) return;
-
-    const name = form.user_name.value.trim();
-    const email = form.user_email.value.trim();
-    const message = form.message.value.trim();
-
-    if (name.length < 3) {
-      setNameError("Name must be at least 3 words.");
-      return;
-    } else {
-      setNameError(null);
-    }
-
-    if (!email.includes("@gmail.com") && !email.includes("@yahoo.com")) {
-      setEmailError("Please provide a valid Gmail or Yahoo email address.");
-      return;
-    } else {
-      setEmailError(null);
-    }
-
-    if (!message) {
-      setMessageError("Message cannot be empty.");
-      return;
-    } else {
-      setMessageError(null);
-    }
-
-    // Send email using emailjs
-    emailjs
-      .sendForm("service_svyylhi", "template_fega6tr", form, "TglTXBBjJ-XHZP7OP")
-      .then(
-        (result) => {
-          toast.success("Your message has been sent");
-          form.reset();
-          console.log("SUCCESS!", result.text);
-          setLoading(false)
-        },
-        (error) => {
-          console.error("FAILED...", error.text);
-          toast.error("There was an error sending your message.");
-       setLoading(false)
-        }
-      );
-  };
-
+const Contact = forwardRef(({ cvLink }, ref) => {
   return (
-    <div ref={ref}>
+    <div
+      ref={ref}
+      style={{
+        backgroundColor: "#05070A",
+        width: "100%",
+        padding: "1.5rem 2rem 1.5rem",
+        borderTop: "1px solid rgba(255,255,255,0.04)",
+      }}
+    >
       <motion.div
-       
-        className="lg:w-full bg-gray-800 py-4 "
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-40px" }}
+        style={{
+          maxWidth: "560px",
+          margin: "0 auto",
+          textAlign: "center",
+          fontFamily: "'Manrope', sans-serif",
+        }}
       >
-        <div className="flex lg:flex-row lg:ml-36 sm:ml-2 sm:mr-2 sm:flex-col  gap-x-40">
-          <form
-            ref={formRef}
-            onSubmit={sendEmail}
-            className="flex flex-col gap-y-6"
-          >
-            <h1 className="text-white font-bold text-2xl ">Contact </h1>
-            <input
-              type="text"
-              name="user_name"
-              className="bg-transparent rounded-md border border-white lg:w-96 h-12 text-white text-sm p-2 outline-none"
-              placeholder="Your Name"
-            />
-            {nameError && <p className="text-red-500 text-sm">{nameError}</p>}
-            <input
-              type="email"
-              name="user_email"
-              className="bg-transparent rounded-md border border-white lg:w-96 h-12 text-white text-sm p-2 outline-none"
-              placeholder="Email Address"
-            />
-            {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
-            <textarea
-              name="message"
-              className="lg:w-96 text-white  bg-transparent rounded-md border border-white h-20 text-sm p-2 outline-none"
-              placeholder="Message"
-            ></textarea>
-            {messageError && (
-              <p className="text-red-500 text-sm">{messageError}</p>
-            )}
-            <button className="bg-white lg:w-96 sm:w-80 lg:ml-0 sm:ml-6 text-gray-700 font-semibold p-2 text-sm h-10">
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </form>
+        {/* Section label */}
+        <p className="section-label" style={{ marginBottom: "0.5rem" }}>Get in Touch</p>
 
-          <div className="flex flex-col p-4 ">
-            <h1 className="text-white font-bold ">Get In Touch</h1>
-            <p className=" text-white mb-4">
-              If you have any questions or inquiries, please don't hesitate to reach out
-              <br /> I will personally review your message within 24 hours and
-              provide you with an efficient solution that meets your specific
-              requirements.
-            </p>
-            <p className="text-white flex flex-row gap-x-2">
-              <MapPin size={20} className="mt-1" /> Lagos, Nigeria
-            </p>
-            <p className="text-white flex flex-row gap-x-2">
-              {" "}
-              <DeviceMobile size={20} className="mt-1" /> (+234) 9076930901
-            </p>
-            <p className="text-white flex flex-row gap-x-2">
-              <Envelope size={20} className="mt-1" />{" "}
-              rufaiabdulrahman21@gmail.com
-            </p>
-            <Links />
-          </div>
-        </div>
+        {/* Heading */}
+        <h2
+          style={{
+            fontFamily: "'Manrope', sans-serif",
+            fontWeight: 500,
+            fontSize: "1.1rem",
+            color: "#D1D5DB",
+            letterSpacing: "-0.01em",
+            lineHeight: 1.2,
+            marginBottom: "0.5rem",
+          }}
+        >
+          Let's build something together.
+        </h2>
+
+        {/* Email */}
+        <motion.a
+          href="mailto:rufaiabdulrahman21@gmail.com"
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          style={{
+            display: "inline-block",
+            fontFamily: "'Manrope', sans-serif",
+            fontWeight: 700,
+            fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)",
+            color: "#FFFFFF",
+            textDecoration: "none",
+            marginBottom: "1.25rem",
+            letterSpacing: "-0.02em",
+            borderBottom: "2px solid rgba(255, 255, 255, 0.1)",
+            paddingBottom: "4px",
+            transition: "color 0.2s, border-color 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = "#2563EB";
+            e.currentTarget.style.borderColor = "#2563EB";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = "#FFFFFF";
+            e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.1)";
+          }}
+        >
+          rufaiabdulrahman21@gmail.com
+        </motion.a>
+
+        {/* Social icons */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          viewport={{ once: true }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "2rem",
+            alignItems: "center",
+          }}
+        >
+            <a
+                        href="https://wa.me/2349076930901"
+                        target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp"
+                        style={{ color: "#4b5563", transition: "color 0.2s", display: "flex" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = "#D1D5DB")}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = "#4b5563")}
+                      >
+                        <FaWhatsapp size={20} />
+                      </a>
+          {/* LinkedIn */}
+          <a
+            href="https://ng.linkedin.com/in/abdulrahman-rufai-202136280"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            style={{
+              color: "#6b7280",
+              transition: "color 0.2s",
+              display: "flex",
+              alignItems: "center",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#6b7280")}
+          >
+            <FaLinkedin size={22} />
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/Omotayo21"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            style={{
+              color: "#6b7280",
+              transition: "color 0.2s",
+              display: "flex",
+              alignItems: "center",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#6b7280")}
+          >
+            <FaGithub size={22} />
+          </a>
+
+          {/* CV */}
+          <a
+            href={cvLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View CV"
+            style={{
+              color: "#6b7280",
+              transition: "color 0.2s",
+              display: "flex",
+              alignItems: "center",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#6b7280")}
+          >
+            <HiDocument size={22} />
+          </a>
+        </motion.div>
       </motion.div>
     </div>
   );

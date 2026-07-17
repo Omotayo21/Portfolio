@@ -1,173 +1,233 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, } from "react-icons/fa6";
+import { FaGithub, FaReact } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { SiExpo } from "react-icons/si";
 
+// ── Tech badge (reused) ───────────────────────────────────────────────────
+const TechBadge = ({ icon: Icon, color, name }) => (
+  <div className="tech-icon-wrapper" style={{ lineHeight: 0 }}>
+    <Icon color={color} size={18} />
+    <span className="tech-tooltip">{name}</span>
+  </div>
+);
 
+// ── Mobile apps data ──────────────────────────────────────────────────────
+const mobileApps = [
+  {
+    id: 1,
+    title: "News App",
+    description:
+      "Cross-platform news aggregator with category filtering, regional selection and article deep-linking.",
+    tech: [
+      { icon: FaReact, color: "#61dafb", name: "React Native" },
+      { icon: SiExpo,  color: "#e5e7eb", name: "Expo" },
+    ],
+    image: "/floxx.jpg",
+    githubLink: "https://github.com/Omotayo21/News-Mobile-App",
+  },
+  {
+    id: 2,
+    title: "E-Commerce Mobile App",
+    description:
+      "Full-stack mobile shopping app with product listings, cart management and user authentication.",
+    tech: [
+      { icon: FaReact, color: "#61dafb", name: "React Native" },
+      { icon: SiExpo,  color: "#e5e7eb", name: "Expo" },
+    ],
+    image: "/shopping mobile.jpg",
+    githubLink: "https://github.com/Omotayo21/react-native-shopping-app",
+    demoLink: null,
+  },
+  {
+    id: 3,
+    title: "Pomodoro Timer",
+    description:
+      "Productivity timer app with push notifications, haptic feedback and audio cues.",
+    tech: [
+      { icon: FaReact, color: "#61dafb", name: "React Native" },
+      { icon: SiExpo,  color: "#e5e7eb", name: "Expo" },
+    ],
+    image: "/pomodoro-timer.jpg",
+    githubLink: "https://github.com/Omotayo21/pomodoro-mobile-App",
+    demoLink: "https://expo.dev/accounts/omotayo21/projects/pomodoro-timer/builds/ead29a8a-b193-408d-a31b-380bf66cd93d",
+  },
+  {
+    id: 4,
+    title: "Notes App",
+    description:
+      "Feature-rich notes app with create/edit/archive/delete, text customisation and local storage.",
+    tech: [
+      { icon: FaReact, color: "#61dafb", name: "React Native" },
+      { icon: SiExpo,  color: "#e5e7eb", name: "Expo" },
+    ],
+    image: "/notes-mobile.jpg",
+    githubLink: "https://github.com/Omotayo21/Notes-app",
+    demoLink: "https://expo.dev/accounts/omotayo21/projects/notes/builds/1c37a82d-75a8-4186-aab9-e8465e35db99",
+  },
+];
+
+// ── MobileApp Component ───────────────────────────────────────────────────
 const MobileApp = () => {
-  const mobileApps = [
-    {
-      id: 1,
-      title: "News App Mobile App",
-      description:
-        "A mobile app built with React Native that displays news from various categories which you can select. Users can also select news from various regions/countries, view details on the news then get easily redirected to the full article if they choose to see it.",
-      techStack: "React Native, Expo CLI, News API",
-      image: "/floxx.jpg",
-      githubLink: "https://github.com/Omotayo21/News-Mobile-App",
-      //demoLink: "#",
-      tag: "React Native",
-    },
-    {
-      id: 2,
-      title: "E-Commerce Mobile App",
-      description:
-        "A full-stack mobile e-commerce application built with React Native, express.js, mongoDB and Node.js. Includes product listings, shopping cart and user authentication.",
-      techStack: "React Native,Expo CLI, mongoDB, express.js, Node.js",
-      image: "/shopping mobile.jpg", // Replace with your actual image path
-      githubLink: "https://github.com/Omotayo21/react-native-shopping-app",
-      demoLink: "#",
-      tag: "React Native",
-    },
-    {
-      id: 3,
-      title: "Pomodoro Timer Mobile App",
-      description:
-        "A pomodoro timer mobile app built with React Native that helps users track their time and productivity with push notifications and sound effects.",
-      techStack: "React Native,Expo CLI, Haptics, typescript, expo-audio",
-      image: "/pomodoro-timer.jpg", // Replace with your actual image path
-      githubLink: "https://github.com/Omotayo21/pomodoro-mobile-App",
-      demoLink:
-        "https://expo.dev/accounts/omotayo21/projects/pomodoro-timer/builds/ead29a8a-b193-408d-a31b-380bf66cd93d",
-      tag: "React Native",
-    },
-    {
-      id: 4,
-      title: "Notes Mobile App",
-      description:
-        "A notes mobile app built with React Native that allows users to create, edit, archive delete and search for notes. Users can also change font and color of the notes.",
-      techStack: "React Native,Expo CLI, AsyncStorage",
-      image: "/notes-mobile.jpg", // Replace with your actual image path
-      githubLink: "https://github.com/Omotayo21/Notes-app",
-      demoLink:
-        "https://expo.dev/accounts/omotayo21/projects/notes/builds/1c37a82d-75a8-4186-aab9-e8465e35db99",
-      tag: "React Native",
-    },
-  ];
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true, margin: "-100px" }}
-      className="w-full py-16 bg-black text-white"
+      style={{
+        width: "100%",
+        paddingTop: "2rem",
+        fontFamily: "'Manrope', sans-serif",
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-4xl text-white font-bold uppercase text-center mb-12"
-        >
-          Mobile Apps
-        </motion.h2>
+      {/* Section label */}
+      <p className="section-label" style={{ marginBottom: "0.5rem" }}>Mobile</p>
 
-        <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-stretch">
-          {mobileApps.map((app, index) => (
+      {/* Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        style={{
+          fontFamily: "'Manrope', sans-serif",
+          fontWeight: 700,
+          fontSize: "2rem",
+          color: "#f9fafb",
+          letterSpacing: "-0.03em",
+          marginBottom: "1.5rem",
+        }}
+      >
+        Mobile Applications
+      </motion.h2>
+
+      {/* Cards — horizontal on desktop, vertical stack on mobile */}
+      <div className="flex flex-col lg:flex-row gap-6 justify-center items-stretch">
+        {mobileApps.map((app, index) => (
+          <motion.div
+            key={app.id}
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.1 + index * 0.1 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-[23%] min-w-[230px]"
+          >
             <motion.div
-              key={app.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 + index * 0.2 }}
-              viewport={{ once: true }}
+              className="card-dark"
               whileHover={{
-                y: -5,
-                boxShadow:
-                  "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                y: -4,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.4)",
               }}
-              className="w-full max-w-md bg-black rounded-xl border-2 border-green-600 overflow-hidden shadow-lg"
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              style={{ borderRadius: "10px", overflow: "hidden", height: "100%", display: "flex", flexDirection: "column" }}
             >
-              <div className="relative">
-                <img
-                  src={app.image}
-                  className="lg:w-full lg:h-64 object-cover"
-                  alt={`${app.title} screenshot`}
-                />
-                <div className="absolute bottom-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  {app.tag}
+              {/* Screenshot */}
+              <img
+                src={app.image}
+                alt={app.title}
+                style={{
+                  width: "100%",
+                  height: "240px",
+                  objectFit: "cover",
+                  display: "block",
+                  borderBottom: "1px solid rgba(255,255,255,0.05)",
+                }}
+              />
+
+              {/* Card body */}
+              <div style={{ padding: "1.25rem", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "flex-start",
+                      gap: "0.5rem",
+                      flexWrap: "wrap",
+                      marginBottom: "0.75rem",
+                    }}
+                  >
+                    <h3
+                      style={{
+                        fontFamily: "'Manrope', sans-serif",
+                        fontWeight: 700,
+                        fontSize: "0.95rem",
+                        color: "#FFFFFF",
+                        letterSpacing: "-0.01em",
+                        margin: 0,
+                      }}
+                    >
+                      {app.title}
+                    </h3>
+
+                    {/* Tech icons */}
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "0.4rem",
+                        alignItems: "center",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {app.tech.map((t) => (
+                        <TechBadge key={t.name} icon={t.icon} color={t.color} name={t.name} />
+                      ))}
+                    </div>
+                  </div>
+
+                  <p
+                    style={{
+                      fontFamily: "'Manrope', sans-serif",
+                      fontWeight: 400,
+                      fontSize: "0.8rem",
+                      color: "#D1D5DB",
+                      lineHeight: 1.5,
+                      margin: 0,
+                    }}
+                  >
+                    {app.description}
+                  </p>
                 </div>
-              </div>
 
-              <div className="p-6 sm:p-8">
-                <motion.h3
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="text-2xl font-bold text-gray-300 uppercase mb-4"
-                >
-                  {app.title}
-                </motion.h3>
-
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="text-gray-200 mb-6"
-                >
-                  {app.description}
-                </motion.p>
-
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="mb-6"
-                >
-                  <span className="text-gray-300 font-semibold">
-                    Tech stack:
-                  </span>
-                  <span className="text-gray-200 ml-2">{app.techStack}</span>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 1 + index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="flex flex-col sm:flex-row gap-4 justify-between items-center pt-4 border-t border-gray-900"
+                {/* Action buttons */}
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "0.5rem",
+                    marginTop: "1.25rem",
+                    paddingTop: "0.75rem",
+                    borderTop: "1px solid rgba(255,255,255,0.04)",
+                  }}
                 >
                   <a
                     href={app.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-green-600 hover:text-green-800 transition-colors font-medium"
+                    className="project-link-btn primary"
+                    style={{ fontSize: "0.75rem", padding: "0.4rem 0.75rem" }}
                   >
-                    <FaGithub size={20} />
-                    <span>View Code</span>
+                    <FaGithub size={12} />
+                    GitHub
                   </a>
 
-                 {app.demoLink && <a
-                    href={app.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
-                  >
-                    {/* Use a link icon from react-icons or one representing Expo */}
-                    {/* Option 1: Using FaExternalLinkAlt from react-icons/fa */}
-                    {/* import { FaExternalLinkAlt } from "react-icons/fa"; (put this at the top of the file) */}
-                    <FaExternalLinkAlt size={18} />
-                    <span>View Demo on Expo</span>
-                  </a>
-                }
-                </motion.div>
+                  {app.demoLink && (
+                    <a
+                      href={app.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link-btn ghost"
+                      style={{ fontSize: "0.75rem", padding: "0.4rem 0.75rem" }}
+                    >
+                      <FaExternalLinkAlt size={10} />
+                      Expo
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
-          ))}
-        </div>
+          </motion.div>
+        ))}
       </div>
     </motion.section>
   );
